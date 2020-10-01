@@ -25,7 +25,7 @@
                                 <img class="m-b-1 m-rl-8" src="<?= base_url()?>/public/home/assets/images/icons/morning.png" alt="IMG">
                             <?php } ?>
 							<span>
-								<?= $weather; ?>
+								<?= $weather; ?>°
 							</span>
 						</span>
 
@@ -101,7 +101,7 @@
                                 <img class="m-b-1 m-rl-8" src="<?= base_url()?>/public/home/assets/images/icons/morning.png" alt="IMG">
                             <?php } ?>
 							<span>
-								<?= $weather; ?>
+								<?= $weather; ?> °
 							</span>
 						</span>
 					</li>
