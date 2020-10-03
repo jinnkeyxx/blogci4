@@ -32,7 +32,10 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+$routes->get('admin', 'Admin::index' , ['filter' => 'noauth']);
+$routes->get('registration', 'Users::registration' , ['filter' => 'noauth']);
 
+// $routes->get('admin', 'Admin::index');
 
 
 
