@@ -60,16 +60,7 @@
                                 <li><a href="post">Tất cả Contacts</a></li>
                             </ul>
                         </li>
-
-                       
-
                         <li class="menu-title mt-2">Components</li>
-
-                       
-
-                        
-
-                      
 
                         <li class="menu-title mt-2">More</li>
 
