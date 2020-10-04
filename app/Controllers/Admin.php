@@ -12,16 +12,7 @@ class Admin extends BaseController
 		
 		$this->data = [];
 	}
-	public function index()
-	{
-		
-		$this->data = [
-			'title' => 'Login',
-		
-		];
-        echo view('admin/login' , $this->data);
-		
-	}
+	
 	
 	
 

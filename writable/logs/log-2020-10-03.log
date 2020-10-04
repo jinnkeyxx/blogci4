@@ -66,3 +66,262 @@ CRITICAL - 2020-10-03 16:57:10 --> syntax error, unexpected 'echo' (T_ECHO)
 #6 C:\xampp\htdocs\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\index.php(45): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2020-10-03 18:03:00 --> Invalid file: {0}
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(224): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/login.php')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/login', Array, true)
+#2 C:\xampp\htdocs\blogci4\app\Controllers\Admin.php(22): view('admin/login', Array)
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Admin->index()
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-10-03 18:29:34 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(125): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 18:29:42 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(125): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 18:31:39 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(125): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 18:33:11 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(125): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 18:38:40 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(125): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 18:41:03 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(125): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 18:43:32 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(125): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 18:49:47 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(125): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 18:51:47 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(125): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 18:54:19 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(124): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 18:56:09 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(124): CodeIgniter\Controller->validate(Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 18:57:14 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(124): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 18:58:23 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(124): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 18:58:44 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(124): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 19:04:02 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(124): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 19:06:46 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(124): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 19:10:07 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(124): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 19:10:52 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(124): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 19:13:17 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(124): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 19:13:29 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(124): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 19:16:55 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(124): CodeIgniter\Controller->validate(Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 19:18:25 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(124): CodeIgniter\Controller->validate(Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 19:24:36 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(124): CodeIgniter\Controller->validate(Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 19:27:48 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(124): CodeIgniter\Controller->validate(Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-03 19:31:46 --> {0} is not a valid rule.
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mm')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('fullname', 'fullname', 'nguyen quang ba...', Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Users.php(124): CodeIgniter\Controller->validate(Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Users->register()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

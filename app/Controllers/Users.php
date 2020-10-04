@@ -16,6 +16,16 @@ class Users extends BaseController
         $this->data = [];
         $this->user = new UserModel();
 
+    }
+    public function index()
+	{
+		
+		$this->data = [
+			'title' => 'Login',
+		
+		];
+        echo view('login' , $this->data);
+		
 	}
 	public function login()
 	{
@@ -39,15 +49,15 @@ class Users extends BaseController
             ]
         ];
 
-        if (! $this->validate($rules, $errors)) {
-            $data['validation'] = $this->validator;
+        if (!$this->validate($rules, $errors)) {
+            // $data['validation'] = $this->validator;
             // var_dump($this->validator->listErrors());
             die(json_encode(array('status' => false , 'messages' => $this->validator->listErrors())));
         }else{
             $user = $this->user->where('username', $this->request->getVar('username'))->first();
 
-            // $this->setUserSession($user);
-            var_dump($user);
+            $this->setUserSession($user);
+            die(json_encode(array('status' => true , 'messages' => 'Đăng nhập thành công')));
             //$session->setFlashdata('success', 'Successful Registration');
             // return redirect()->to('dashboard');
 
@@ -57,10 +67,11 @@ class Users extends BaseController
 	private function setUserSession($user){
 		$data = [
 			'id' => $user['id'],
-			'firstname' => $user['firstname'],
-			'lastname' => $user['lastname'],
+			'fullname' => $user['fullname'],
+			'username' => $user['username'],
 			'email' => $user['email'],
-			'isLoggedIn' => true,
+            'isLoggedIn' => true,
+            'role' => $user['role'],
 		];
 
 		session()->set($data);
@@ -76,38 +87,60 @@ class Users extends BaseController
     public function register()
     {
         $rules = [
-            'fullname' => 'required|min_length[3]|max_length[20]',
-            'username' => 'required|min_length[6]|max_length[50]',
+            'username' => 'required|min_length[6]|max_length[30]|is_unique[users.username]',
+            'password' => 'required|min_length[6]|max_length[255]',
+            'fullname' => 'required|min_length[3]|max_length[30]',
             'email' => 'required|min_length[6]|max_length[50]|valid_email|is_unique[users.email]',
-            'password' => 'required|min_length[8]|max_length[255]',
-            'password_confirm' => 'matches[password]',
+            'rppassword' => 'matches[password]',
         ];
         $errors = [
             'username' => [
-                'required' => 'không được bỏ trống',
+                'required' => ' Tài khoản không được bỏ trống',
                 'min_length' => 'tài khoản không được nhỏ hơn 6 kí tự', 
-                'max_length' => 'Tài khoản không được lớn hơn 20 kí tự',
+                'max_length' => 'Tài khoản không được lớn hơn 30 kí tự',
+                'is_unique' => 'Tài khoản này đã được đăng kí',
             ],
             'password' => [
-                'validateUser' => 'Tài khoản hoặc mật khẩu không đúng',
-                'required' => 'Không được bỏ trống', 
+                'required' => 'Mật khẩu Không được bỏ trống', 
                 'min_length' => 'Mật khẩu không được nhỏ hơn 6 kí tự',
                 'max_length' => 'Mật khẩu quá dài',
-            ]
+            ],
+            'fullname' => [
+                'required' => 'Họ tên Không được bỏ trống' ,
+                'min_length' => 'Họ Tên không được nhỏ hơn 3 kí tự',
+                'max_length' => 'Họ tên không được lớn hơn 30 kí tự',
+            ],
+            'email' => [
+                'required' => 'Email không được bỏ trống',
+                'min_length' => 'Email không được nhỏ hơn 6 kí tự',
+                'max_length' => 'Email không được lớn hơn 50 kí tự',
+                'valid_email' => 'Email không đúng định dạng' ,
+                'is_unique' => 'Email đã được đăng kí',
+
+            ],
+            'rppassword' => [
+                'matches' => 'Mật khẩu không khớp',
+            ],
         ];
 
-        if (! $this->validate($rules , $errors)) {
-            $data['validation'] = $this->validator;
+        if (! $this->validate($rules ,$errors)) {
+				$data['validation'] = $this->validator;
+            die(json_encode(array('status' => false , 'messages' => $this->validator->listErrors())));
         }else{
             
 
             $newData = [
-                'firstname' => $this->request->getVar('firstname'),
-                'lastname' => $this->request->getVar('lastname'),
+                'fullname' => $this->request->getVar('fullname'),
+                'username' => $this->request->getVar('username'),
                 'email' => $this->request->getVar('email'),
                 'password' => $this->request->getVar('password'),
+                'role' => 1,
             ];
             $this->user->save($newData);
+            $user = $this->user->where('username', $this->request->getVar('username'))->first();
+
+            $this->setUserSession($user);
+            die(json_encode(array('status' => true , 'messages' => 'Đăng kí thành công')));
             // $session = session();
             // $session->setFlashdata('success', 'Successful Registration');
             // return redirect()->to('/');

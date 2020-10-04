@@ -1,7 +1,7 @@
 <?= view('admin/templates/meta.php'); ?>
 <body class="authentication-bg">
 
-        <div class="account-pages pt-5 my-5">
+        <div class="account-pages pt-1 my-1">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-6 col-xl-5">
@@ -20,8 +20,8 @@
     
                                     <form  class="mt-2" id="registration">
                                         <div class="form-group mb-3">
-                                            <label for="fullname">Email</label>
-                                            <input class="form-control" type="text"  placeholder="Enter your username" id="fullname">
+                                            <label for="fullname">Tên đầy đủ</label>
+                                            <input class="form-control" type="text"  placeholder="Enter your fullname" id="fullname">
                                         </div>
                                         <div class="form-group mb-3">
                                             <label for="email">Email</label>
@@ -37,14 +37,14 @@
                                             <input class="form-control" type="password"  id="password" placeholder="Enter your password">
                                         </div>
                                         <div class="form-group mb-3">
-                                        <label for="rppassword">Lặp lai mật khau</label>
+                                        <label for="rppassword">Lặp lại mật khẩu</label>
                                             <input class="form-control" type="password"  id="rppassword" placeholder="Enter your repeat password">
                                         </div>
                                         
                                         <div class="form-group text-center">
                                             <button class="btn btn-success btn-block waves-effect waves-light" type="submit" id="submit"> Log In </button>
                                         </div>
-                                        
+                                        <p class="text-center">Đã có tài khoản vui lòng<a href="login" class="text-danger"> Đăng nhập</a> </p>
                                         <div class="alert " role="alert" id="error"></div>
                                     </form>
 

@@ -34,11 +34,11 @@
                                                 <label class="custom-control-label" for="checkbox-signin">Remember me</label>
                                             </div>
                                         </div>
-    
+                                        
                                         <div class="form-group text-center">
                                             <button class="btn btn-success btn-block waves-effect waves-light" type="submit" id="submit"> Log In </button>
                                         </div>
-                                        
+                                        <p class="text-center">Chưa có tài khoản vui lòng<a href="registration" class="text-danger"> Đăng Kí</a> </p>
                                         <div class="alert " role="alert" id="error"></div>
                                     </form>
 
