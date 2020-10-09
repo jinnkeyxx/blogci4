@@ -1,5 +1,6 @@
 <?php namespace App\Controllers;
 use App\Models\UserModel;
+use App\Models\InfoModel;
 class Users extends BaseController
 {
 	
@@ -7,6 +8,11 @@ class Users extends BaseController
     public $user;
     public $status;
     public $messages;
+    public $fb;
+    public $fb_helper;
+    public $google;
+    public $info;
+    public $app;
 	/**
 	 * Class constructor.
 	 */
@@ -15,13 +21,32 @@ class Users extends BaseController
 		
         $this->data = [];
         $this->user = new UserModel();
-
+        $this->info = new InfoModel();
+        $this->app = $this->info->where('id' , 1)->first();
+        require_once APPPATH.'Libraries/vendor/autoload.php';
+        $this->fb = new \Facebook\Facebook([
+            'app_id' => $this->app['appid_fb'],
+            'app_secret' => $this->app['appsecret_fb'],
+            'default_graph_version' => 'v2.7'
+        ]);
+        $this->fb_helper = $this->fb->getRedirectLoginHelper();
+        $this->google = new \Google_Client();
+        $this->google->setClientId($this->app['appid_gg']);
+        $this->google->setClientSecret($this->app['appsecret_gg']);
+        $this->google->setRedirectUri(base_url().'/logingoogle');
+        $this->google->addScope('email');
+        $this->google->addScope('profile');
     }
     public function index()
 	{
-		
+        
+        
+        $redirectURL = base_url().'/loginfacebook';
 		$this->data = [
-			'title' => 'Login',
+            'title' => 'Login',
+            'loginfb' =>$this->fb_helper->getLoginUrl($redirectURL),
+            'logingg' => $this->google->createAuthUrl(),
+
 		
 		];
         echo view('login' , $this->data);
@@ -76,6 +101,10 @@ class Users extends BaseController
 
 		session()->set($data);
 		return true;
+    }
+    public function logout(){
+		session()->destroy();
+		return redirect()->to(base_url());
 	}
     public function registration()
     {
@@ -145,6 +174,90 @@ class Users extends BaseController
             // $session->setFlashdata('success', 'Successful Registration');
             // return redirect()->to('/');
 
+        }
+    }
+    public function loginFacebook()
+    {
+
+        if($this->request->getVar('state'))
+        {
+            $this->fb_helper->getPersistentDataHandler()->set('state' , $this->request->getVar('state'));
+     
+        }
+        if($this->request->getVar('code'))
+        {
+            
+            if(session()->get('access_token'))
+            {
+                $access_token = (string)session()->get('access_token');
+            }
+            else 
+            {
+                $access_token = $this->fb_helper->getAccessToken();
+                session()->get('access_token' , $access_token);
+                $this->fb->setDefaultAccessToken((string)session()->get('access_token'));
+            }
+            $graph_respone = $this->fb->get('/me?locale=vi_VN&fields=name,email' ,  $access_token);
+            $fb_user_info = $graph_respone->getGraphUser();
+          
+            if(!empty($fb_user_info['id']))
+            {
+                $newData = [
+                    // 'profile_pic' => 'https://graph.facebook.com/'.$fb_user_info['id'].'picture',
+                    'fullname' => $fb_user_info['name'],
+                    'username' => $fb_user_info['email'],
+                    'email' => $fb_user_info['email'],
+                    'password' => md5($fb_user_info['email']),
+                    'role' => 1,
+                ];
+                $user = $this->user->where('username', $fb_user_info['email'])->first();
+                if($user == NULL)
+                {
+                    $this->user->save($newData);
+                    $user = $this->user->where('username', $fb_user_info['email'])->first();
+                    $this->setUserSession($user);
+                }
+                else {
+                     $this->setUserSession($user);
+                }
+                return redirect()->to('home');
+                // echo "<pre>";
+                // print_r($newData);
+            }
+        }
+        
+    }
+    public function logingoogle()
+    {
+        if($this->request->getVar('code'))
+        {
+            $token = $this->google->fetchAccessTokenWithAuthCode($this->request->getVar('code'));
+            if(!isset($token['error']))
+            {
+                $this->google->setAccessToken($token['access_token']);
+                session()->set('access_token' , $token['access_token']);
+                $google_service = new \Google_Service_Oauth2($this->google);
+                $this->data = $google_service->userinfo->get();
+                // print_r($this->data);
+                $newData = [
+                    'fullname' => $this->data['given_name'] . $this->data['family_name'],
+                    'username' => $this->data['email'],
+                    'email' => $this->data['email'],
+                    'password' => md5($this->data['email']),
+                    'role' => 1,
+                ];
+                $user = $this->user->where('username', $this->data['email'])->first();
+                if($user == NULL)
+                {
+                    $this->user->save($newData);
+                    $user = $this->user->where('username', $this->data['email'])->first();
+                    $this->setUserSession($user);
+                }
+                else {
+                     $this->setUserSession($user);
+                }
+                return redirect()->to('home');
+            }
         }
     }
 	//--------------------------------------------------------------------

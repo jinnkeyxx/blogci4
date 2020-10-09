@@ -1,7 +1,7 @@
 <?= view('admin/templates/meta.php'); ?>
 <body class="authentication-bg">
 
-        <div class="account-pages pt-5 my-5">
+        <div class="account-pages pt-2 my-2">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-6 col-xl-5">
@@ -41,7 +41,25 @@
                                         <p class="text-center">Chưa có tài khoản vui lòng<a href="registration" class="text-danger"> Đăng Kí</a> </p>
                                         <div class="alert " role="alert" id="error"></div>
                                     </form>
+                                    <div class="text-center ">
+                                        <h5 class="text-muted py-2"><b>Sign in with</b></h5>
 
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <a href="<?=$loginfb; ?>" class="btn btn-facebook waves-effect font-14 waves-light mt-3">
+                                                    <i class="fab fa-facebook-f mr-1"></i> Facebook
+                                                </a>
+            
+                                                <button type="button" class="btn btn-twitter waves-effect font-14 waves-light mt-3">
+                                                    <i class="fab fa-twitter mr-1"></i> Twitter
+                                                </button>
+            
+                                                <a href="<?= $logingg; ?>" class="btn btn-googleplus waves-effect font-14 waves-light mt-3">
+                                                    <i class="fab fa-google-plus-g mr-1"></i> Google+
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                     
     
                                 </div> <!-- end card-body -->
@@ -60,3 +78,4 @@
         </div>
         <!-- end page -->
 <?= view('admin/templates/footer.php'); ?>
+

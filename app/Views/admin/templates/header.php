@@ -202,7 +202,7 @@
                 <li class="dropdown notification-list">
                     <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
                         <img src="<?= base_url() ?>\public\admin\assets\images\users\avatar-1.jpg" alt="user-image" class="rounded-circle">
-                        <span class="d-none d-sm-inline-block ml-1 font-weight-medium">Alex M.</span>
+                        <span class="d-none d-sm-inline-block ml-1 font-weight-medium"><?= session()->get('fullname') ?></span>
                         <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right profile-dropdown" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(129px, 70px, 0px);">

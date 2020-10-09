@@ -36,27 +36,30 @@
 						<a href="#" class="left-topbar-item">
 							Contact
 						</a>
-                        <a href="login" class="left-topbar-item">LogIn/Register <i class="fas fa-user mr-1"></i></a>
+						<?php if(session()->get('id')): ?>
+						<a href="logout" class="left-topbar-item">Logout <i class="fas fa-user mr-1"></i></a>
+						<a href="profile" class="left-topbar-item"><?= session()->get('fullname') ?> <i class="fas fa-user mr-1"></i></a>
+						<?php else: ?>
+							<a href="login" class="left-topbar-item">LogIn/Register <i class="fas fa-user mr-1"></i></a>
+						<?php endif; ?>
 					</div>
 
 					<div class="right-topbar">
-						<a href="#">
+						<a href="<?= $info['facebook'] ?>" target="_blank">
 							<span class="fab fa-facebook-f"></span>
 						</a>
 
-						<a href="#">
+						<a href="<?= $info['twitter'] ?>" target="_blank">
 							<span class="fab fa-twitter"></span>
 						</a>
 
-						<a href="#">
-							<span class="fab fa-pinterest-p"></span>
+						<a href="mailto:<?= $info['gmail'] ?>" target="_blank">
+							<span class="fab fa-google-plus"></span>
 						</a>
 
-						<a href="#">
-							<span class="fab fa-vimeo-v"></span>
-						</a>
+						
 
-						<a href="#">
+						<a href="<?= $info['youtube'] ?>" target="_blank">
 							<span class="fab fa-youtube"></span>
 						</a>
 					</div>
@@ -67,7 +70,7 @@
 			<div class="wrap-header-mobile">
 				<!-- Logo moblie -->		
 				<div class="logo-mobile">
-					<a href="index.html"><img src="<?= base_url()?>/public/home/assets/images/icons/logo-01.png" alt="IMG-LOGO"></a>
+					<a href=""><img src="<?= $header['logo'] ?>" alt="IMG-LOGO" title="<?=$header['title_logo']?>"></a>
 				</div>
 
 				<!-- Button show menu -->
@@ -206,12 +209,12 @@
 			<div class="wrap-logo container">
 				<!-- Logo desktop -->		
 				<div class="logo">
-					<a href=""><img src="<?= base_url()?>/public/home/assets/images/icons/logo-01.png" alt="LOGO"></a>
+				<a href=""><img src="<?= $header['logo'] ?>" alt="IMG-LOGO" title="<?=$header['title_logo']?>"></a>
 				</div>	
 
 				<!-- Banner -->
 				<div class="banner-header">
-					<a href="#"><img src="<?= base_url()?>/public/home/assets/images/banner-01.jpg" alt="IMG"></a>
+				<a href=""><img src="<?= $header['banner'] ?>" alt="IMG-LOGO" title="<?=$header['title_banner']?>"></a>
 				</div>
 			</div>	
 			

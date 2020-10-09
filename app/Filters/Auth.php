@@ -10,8 +10,19 @@ class Auth implements FilterInterface
     {
         // Do something here
         if(! session()->get('isLoggedIn')){
-          return redirect()->to('/public');
+
+          return redirect()->to('login');
         }
+        else {
+            if(session()->get('role') == 0){
+                // return redirect()->to('dashboard');
+            }
+            else {
+                return redirect()->to('home');
+
+            }
+        }
+
 
     }
 

@@ -81,5 +81,158 @@ $(document).ready(() => {
             })
         }
     })
+    $('#setting_meta').submit((e) => {
+        e.preventDefault()
+
+        let description = $('#description')
+        let copyright = $('#copyright')
+        let region = $('#region')
+        let position = $('#position')
+        let author = $('#author')
+        let ICBM = $('#ICBM')
+
+        if ($('textarea').text() == "") {
+            swal('Không được bỏ trống')
+        } else {
+
+            $.ajax({
+                url: 'Settings/setting_meta',
+                type: 'post',
+                data: {
+                    description: description.val(),
+                    copyright: copyright.val(),
+                    region: region.val(),
+                    position: position.val(),
+                    author: author.val(),
+                    ICBM: ICBM.val(),
+
+                },
+                dataType: 'json',
+                beForeSend: () => {
+                    $('#submit').html(`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span class="sr-only">Loading...</span>`)
+                },
+                success: (respone) => {
+                    if (respone.status == true) {
+                        swal(respone.messages, 'success')
+                        load(2000)
+                    } else {
+                        $('#error').addClass('alert-danger')
+                        $('#error').html(respone.messages)
+                        swal('Cập nhật thất bại', 'error')
+
+                    }
+                }
+            })
+        }
+    })
+    $('#setting_header').submit((e) => {
+        e.preventDefault();
+        let logo = $('#logo')[0].files[0];
+        let banner = $('#banner')[0].files[0];
+
+        let title_logo = $('#title_logo')
+
+        let title_banner = $('#title_banner')
+
+        let formdata = new FormData()
+
+        formdata.append('title_logo', title_logo.val())
+        formdata.append('title_banner', title_banner.val())
+        formdata.append('logo', logo)
+        formdata.append('banner', banner)
+
+        $.ajax({
+            url: 'Settings/setting_header',
+            type: 'post',
+            data: formdata,
+            contentType: false,
+            cache: false,
+            processData: false,
+            dataType: 'json',
+            beForeSend: () => {
+
+            },
+            success: (respone) => {
+                if (respone.status == true) {
+                    swal(respone.messages, 'success')
+                    load(2000)
+                } else {
+                    $('#error').addClass('alert-danger')
+                    $('#error').html(respone.messages)
+                    swal('Cập nhật thất bại', 'error')
+
+                }
+            }
+        })
+
+
+    })
+
+    function responsive_filemanager_callback(field_id) {
+        console.log(field_id);
+        var url = jQuery('#' + field_id).val();
+        alert('update ' + field_id + " with " + url);
+        //your code
+    }
+    $('#setting_info').submit((e) => {
+        e.preventDefault()
+        let facebook = $('#facebook')
+        let gmail = $('#gmail')
+        let youtube = $('#youtube')
+        let appid_fb = $('#appid_fb')
+        let appsecret_fb = $('#appsecret_fb')
+        let appid_gg = $('#appid_gg')
+        let appsecret_gg = $('#appsecret_gg')
+        if ($('textarea').text() == "") {
+            swal('Không được bỏ trống')
+        } else {
+
+            $.ajax({
+                url: 'Settings/setting_info',
+                type: 'post',
+                data: {
+                    facebook: facebook.val(),
+                    gmail: gmail.val(),
+                    youtube: youtube.val(),
+                    appid_fb: appid_fb.val(),
+                    appsecret_fb: appsecret_fb.val(),
+                    appid_gg: appid_gg.val(),
+                    appsecret_gg: appsecret_gg.val(),
+                },
+                dataType: 'json',
+                beForeSend: () => {
+                    $('#submit').html(`<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span class="sr-only">Loading...</span>`)
+                },
+                success: (respone) => {
+                    if (respone.status == true) {
+                        swal(respone.messages, 'success')
+                        load(2000)
+                    } else {
+                        $('#error').addClass('alert-danger')
+                        $('#error').html(respone.messages)
+                        swal('Cập nhật thất bại', 'error')
+
+                    }
+                }
+            })
+        }
+    })
+    $('#form-post').submit(() => {
+        let content = $('#content').val()
+        alert(content)
+    })
+    $('.iframe-btn').fancybox({
+        'width': 900,
+        'height': 600,
+        'type': 'iframe',
+        'autoScale': false
+    });
+
+
+
+
+
 
 })

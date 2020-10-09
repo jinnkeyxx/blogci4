@@ -9,20 +9,23 @@ class Noauth implements FilterInterface
     public function before(RequestInterface $request)
     {
         // Do something here
-        if(session()->get('isLoggedIn')){
-          if(session()->get('role') == 0)
-          {
+		if(session()->get('isLoggedIn'))
+		{
 
-          return redirect()->to('dashboard');
+            if(session()->get('role') == 0)
+            {
+
+               return redirect()->to('dashboard');
            
-          }
-          else {
-          return redirect()->to('home');
+            }
+            else 
+            {
+               return redirect()->to('home');
 
-          }
-        
+            }
 
-        }
+		}
+		
 
     }
 

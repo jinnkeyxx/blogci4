@@ -1,9 +1,16 @@
 <?php namespace App\Controllers;
-// use App\Models\PostModel;
+use App\Models\MetaModel;
+use App\Models\HeaderModel;
+use App\Models\InfoModel;
+use App\Models\UserModel;
 class Home extends BaseController
 {
 	
 	public $data;
+	public $meta;
+	public $header;
+	public $info;
+	public $user;
 	/**
 	 * Class constructor.
 	 */
@@ -11,6 +18,10 @@ class Home extends BaseController
 	{
 		
 		$this->data = [];
+		$this->meta = new MetaModel();
+		$this->header = new HeaderModel();
+		$this->info = new InfoModel();
+		$this->user = new UserModel();
 	}
 	public function index()
 	{
@@ -28,6 +39,11 @@ class Home extends BaseController
 			'location' => $this->ipinfo('Visitor' , 'Address'),
 			'weather' => $this->get_weather(),
 			'date' => date('H'),
+			'meta' => $this->meta->first(),
+			'header' => $this->header->first(),
+			'info' => $this->info->where('id' , 1)->first(),
+			'user' => $this->user->where('id' , session()->get('id'))->fisrt(),
+			
 		];
 		echo view('home/index' , $this->data);
 		// echo $this->get_weather();
@@ -102,11 +118,11 @@ class Home extends BaseController
 	}
 	public function get_weather()
 	{
-		$url="http://api.openweathermap.org/data/2.5/forecast?q=Hanoi,vn&APPID=5099c5feb579c7a17b030de0d009282f&units=metric";
+		#http://api.openweathermap.org/data/2.5/forecast?q=Hanoi,vn&APPID=3f6ff77d87316e8f9bd0c0272c72baa6&units=metric
+		$url="http://api.openweathermap.org/data/2.5/weather?q=Hanoi,vn,&appid=3f6ff77d87316e8f9bd0c0272c72baa6";
 		$json=file_get_contents($url);
 		$data=json_decode($json);
-		// echo $data->city->name; 
-		return $data->list[0]->main->temp;
+		return $data->coord->lat;
 	}
 
 	//--------------------------------------------------------------------

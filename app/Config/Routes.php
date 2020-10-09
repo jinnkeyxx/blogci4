@@ -19,6 +19,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php'))
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
+
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
@@ -31,12 +32,22 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+// $routes->get('/', 'Home::index');
 $routes->get('/', 'Home::index');
+$routes->get('loginfacebook', 'Users::loginfacebook');
+$routes->get('logingoogle', 'Users::logingoogle');
+$routes->get('logout', 'Users::logout');
+
 $routes->get('login', 'Users::index' , ['filter' => 'noauth']);
 $routes->get('registration', 'Users::registration' , ['filter' => 'noauth']);
 $routes->get('dashboard', 'Dashboard::index',['filter' => 'auth']);
+$routes->get('setting-meta', 'Dashboard::setting_meta',['filter' => 'auth']);
+$routes->get('setting-header', 'Dashboard::setting_header',['filter' => 'auth']);
+$routes->get('setting-info', 'Dashboard::setting_info',['filter' => 'auth']);
+$routes->get('write-post', 'Dashboard::write_post',['filter' => 'auth']);
+$routes->get('category', 'Dashboard::category',['filter' => 'auth']);
+// $routes->match(['get','post'],'setting-meta', 'Dashboard::setting_meta',['filter' => 'auth']);
 
-// $routes->get('admin', 'Admin::index');
 
 
 
