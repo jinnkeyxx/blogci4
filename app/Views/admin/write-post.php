@@ -22,7 +22,7 @@
                 <label for="danhmuc">Danh mục bài viết</label>
                 <select class="form-control" id="danhmuc">
                     <?php foreach($category as $value): ?>
-                    <option value="<?= $value; ?>"><?= $value; ?></option>
+                    <option value="<?= $value['name']; ?>"><?= $value['name']; ?></option>
                     <?php endforeach; ?>
                 </select>
             </div>

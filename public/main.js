@@ -229,7 +229,76 @@ $(document).ready(() => {
         'type': 'iframe',
         'autoScale': false
     });
+    $('#category').submit((e) => {
+        e.preventDefault()
+        let name = $('#name').val()
+        if(name == ""){
+            swal('Tên danh mục không được bỏ trống' , 'error')
+        }
+        else {
+            $.ajax({
+                url : 'Posts/add_category',
+                type : 'post',
+                data : {name : name},
+                dataType : 'json',
+                beForeSend : () => {
 
+                }, success : (respone) => {
+                    if(respone.status == true){
+                        swal(respone.messages , 'success')
+
+                        load(2000)
+                    }
+                    else {
+                        $('#error').addClass('alert-danger')
+                        $('#error').html(respone.messages)
+                        swal('không thành công' , 'error')
+                    }
+                    
+                }
+            })
+        }
+    })
+    $(document).on('click', '.check_box', function (){
+        if (this.checked) {
+            var html = "";
+            html = `<td><input type="checkbox" id="${$(this).attr('id')}" data-name="${$(this).data('name')}" data-stt="${$(this).data('stt')}" class="check_box"  checked/>${$(this).data('stt')}</td>`
+            html += `<td><input type="text" name="name[]" class="form-control" value="${$(this).data("name")}" /></td>`
+        }
+        else {
+            html = `<td><input type="checkbox" id="${$(this).attr('id')}" data-name="${$(this).data('name')}"  data-stt="${$(this).data('stt')}" class="check_box"/>${$(this).data('stt')}</td>`
+            html += `<td>${$(this).data('name')}</td>`
+        }
+        $(this).closest('tr').html(html);
+    })
+    $('#delete').click(() => {
+        if ($('.check_box:checked').length > 0) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Bạn có thực sự muốn xóa?',
+                showDenyButton: false,
+                showCancelButton: true,
+                confirmButtonText: 'Xóa',
+                cancelButtonText: 'Trở về',
+
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: 'Posts/delete_category',
+                        method: "POST",
+                        data: $('#form_cartegory').serialize(),
+                        success: function(respone) {
+                            load(1000)
+                        }
+                    })
+                }
+            })
+
+        } else {
+           swal('Không có lựa chọn nào' , 'warning')
+        }
+    });
 
 
 
