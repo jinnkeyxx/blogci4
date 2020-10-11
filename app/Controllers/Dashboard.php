@@ -3,6 +3,7 @@ use App\Models\MetaModel;
 use App\Models\HeaderModel;
 use App\Models\InfoModel;
 use App\Models\CategoryModel;
+use App\Models\Sub_CategoryModel;
 class Dashboard extends BaseController
 {
 	
@@ -11,6 +12,7 @@ class Dashboard extends BaseController
 	public $header;
 	public $info;
 	public $category;
+	public $sub_category;
 	/**
 	 * Class constructor.
 	 */
@@ -22,6 +24,7 @@ class Dashboard extends BaseController
 		$this->header = new HeaderModel();
 		$this->info = new InfoModel();
 		$this->category = new CategoryModel();
+		$this->sub_category = new Sub_CategoryModel();
 	}
 	public function index()
 	{
@@ -82,6 +85,16 @@ class Dashboard extends BaseController
 		];
 		echo view('admin/category' , $this->data);
 
+	}
+	public function sub_category()
+	{
+		$this->data = [
+			'title' => 'Quản lí danh mục',
+			'page' => 'Quản lí danh mục',
+			'category' => $this->category->findAll(),
+			'sub_category' => $this->sub_category->findAll(),
+		];
+		echo view('admin/sub_category' , $this->data);
 	}
  	private function to_slug($str) {
         $str = trim(mb_strtolower($str));

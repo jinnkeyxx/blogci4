@@ -24,8 +24,16 @@
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <form id="category" method="post">
+                        <form id="add_sub_category" method="post">
                             <div class="modal-body">
+                            <div class="form-group">
+                                <label for="list_category">Danh sách danh mục hiện có</label>
+                                <select name="" id="id_sub_category" class="form-control">
+                                <?php foreach($category as $key => $value):?>
+                                    <option value="<?= $value['id'] ?>"><?= $value['name']; ?></option>
+                                <?php endforeach; ?>
+                                </select>
+                            </div>
                                 <div class="form-group">
                                     <label for="name">Tên danh mục</label>
                                     <input type="text" class="form-control" placeholder="Tên danh mục" id="name">
@@ -49,43 +57,40 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="action my-2">
-                                <button class=" btn btn-danger" id="delete_category" type="button">Delete</button>
-                                <button class=" btn btn-primary" id="update_category" type="button">Cập nhật</button>
-                            </div>
-
-                            <table id="datatable"
-                                class=" text-center table table-bordered dt-responsive nowrap dataTable no-footer dtr-inline"
-                                style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid"
-                                aria-describedby="datatable_info">
-                                <thead>
-                                    <tr role="row">
-                                        <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1"
-                                            colspan="1" style="width: 155px;" aria-sort="ascending"
-                                            aria-label="Name: activate to sort column descending">stt</th>
-                                        <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1"
-                                            colspan="1" style="width: 155px;" aria-sort="ascending"
-                                            aria-label="Name: activate to sort column descending">Name</th>
-
-
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php foreach($category as $key => $value): ?>
-                                    <tr role="row" class="even">
-                                        <td tabindex="0" class="sorting_<?= $key+1 ?>">
-                                            <input type="checkbox" data-id="<?= $value['id'] ?>" class="check_box"
-                                                data-name="<?= $value['name'] ?>" data-stt="<?= $key+1 ?>" id="<?= $value['id']?>" />
-                                            <?= $key+1; ?>
-                                        </td>
-                                        <td tabindex="0">
-                                            <?= $value['name']; ?>
-                                        </td>
-
-
-                                    </tr>
+                                <div class="form-group">
+                                    <label for="list_category">Danh sách danh mục hiện có</label>
+                                    <select name="" id="id_category" class="form-control">
+                                    <?php foreach($category as $key => $value):?>
+                                        <option value="<?= $value['id'] ?>" selected><?= $value['name']; ?></option>
                                     <?php endforeach; ?>
-                                </tbody>
-                            </table>
+                                    </select>
+                                </div>
+                                <button class=" btn btn-danger" id="delete_sub_category" type="button">Delete</button>
+                                <button class=" btn btn-primary" id="update_sub_category" type="button">Cập nhật</button>
+                            </div>
+                            <form  id="form_category" enctype='multipart/form-data'>
+                                <table id="datatable"
+                                    class=" text-center table table-bordered dt-responsive nowrap dataTable no-footer dtr-inline"
+                                    style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid"
+                                    aria-describedby="datatable_info">
+                                    <thead>
+                                        <tr role="row">
+                                            <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1"
+                                                colspan="1" style="width: 155px;" aria-sort="ascending"
+                                                aria-label="Name: activate to sort column descending">stt</th>
+                                            <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1"
+                                                colspan="1" style="width: 155px;" aria-sort="ascending"
+                                                aria-label="Name: activate to sort column descending">Name</th>
+
+
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody id="load_sub_categoty">
+                                        
+                                    </tbody>
+                                </table>
+                            </form>
                         </div>
                     </div>
 
@@ -94,21 +99,6 @@
         </div>
     </div>
 </div>
-<form id="setting_header">
-    <div class="row">
-        <div id="error"></div>
-
-        <button class="form-control btn btn-primary">Luư lại</button>
-</form>
-
-
-
-
-
-
-
-
-<!-- Footer Start -->
 <footer class="footer">
     <div class="container-fluid">
         <div class="row">

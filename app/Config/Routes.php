@@ -37,7 +37,6 @@ $routes->get('/', 'Home::index');
 $routes->get('loginfacebook', 'Users::loginfacebook');
 $routes->get('logingoogle', 'Users::logingoogle');
 $routes->get('logout', 'Users::logout');
-
 $routes->get('login', 'Users::index' , ['filter' => 'noauth']);
 $routes->get('registration', 'Users::registration' , ['filter' => 'noauth']);
 $routes->get('dashboard', 'Dashboard::index',['filter' => 'auth']);
@@ -46,6 +45,7 @@ $routes->get('setting-header', 'Dashboard::setting_header',['filter' => 'auth'])
 $routes->get('setting-info', 'Dashboard::setting_info',['filter' => 'auth']);
 $routes->get('write-post', 'Dashboard::write_post',['filter' => 'auth']);
 $routes->get('category', 'Dashboard::category',['filter' => 'auth']);
+$routes->get('sub_category', 'Dashboard::sub_category',['filter' => 'auth']);
 // $routes->match(['get','post'],'setting-meta', 'Dashboard::setting_meta',['filter' => 'auth']);
 
 

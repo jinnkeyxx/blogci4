@@ -1,0 +1,87 @@
+CRITICAL - 2020-10-11 03:23:34 --> Undefined index: id
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 58, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->delete_category()
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-11 04:10:27 --> Undefined variable: name
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(82): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 82, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->update_category()
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-11 04:16:45 --> Argument 1 passed to CodeIgniter\Validation\Rules::min_length() must be of the type string or null, array given, called in C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php on line 279
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(279): CodeIgniter\Validation\Rules->min_length(Array, '3', Array, NULL)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('name', 'name', Array, Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(93): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->update_category()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-11 04:20:15 --> Argument 1 passed to CodeIgniter\Validation\Rules::min_length() must be of the type string or null, array given, called in C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php on line 279
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(279): CodeIgniter\Validation\Rules->min_length(Array, '3', Array, NULL)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('name', 'name', Array, Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(93): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->update_category()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-11 04:21:21 --> Argument 1 passed to CodeIgniter\Validation\Rules::min_length() must be of the type string or null, array given, called in C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php on line 279
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(279): CodeIgniter\Validation\Rules->min_length(Array, '3', Array, NULL)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('name', 'name', Array, Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(94): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->update_category()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-11 04:25:34 --> Argument 1 passed to CodeIgniter\Validation\Rules::min_length() must be of the type string or null, array given, called in C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php on line 279
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(279): CodeIgniter\Validation\Rules->min_length(Array, '3', Array, NULL)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('name', 'name', Array, Array, Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Controller.php(220): CodeIgniter\Validation\Validation->run()
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(94): CodeIgniter\Controller->validate(Array, Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->update_category()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-11 05:17:36 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/sub_categ...', Array, true)
+#1 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(96): view('admin/sub_categ...', Array)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->sub_category()
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-10-11 06:09:04 --> Undefined property: App\Controllers\Posts::$sub_category
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->load_category()
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-11 06:10:01 --> Call to a member function where() on null
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->load_category()
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-10-11 06:10:28 --> Call to a member function where() on null
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->load_category()
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-10-11 06:11:26 --> Call to a member function where() on null
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->load_category()
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}

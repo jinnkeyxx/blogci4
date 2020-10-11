@@ -41,6 +41,7 @@
                             </a>
                             <ul class="nav-second-level" aria-expanded="false">
                                 <li><a href="category">Tất cả danh mục</a></li>
+                                <li><a href="sub_category">Danh mục con</a></li>
                         <li>
 
 

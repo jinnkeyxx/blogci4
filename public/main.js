@@ -232,46 +232,46 @@ $(document).ready(() => {
     $('#category').submit((e) => {
         e.preventDefault()
         let name = $('#name').val()
-        if(name == ""){
-            swal('Tên danh mục không được bỏ trống' , 'error')
-        }
-        else {
+        if (name == "") {
+            swal('Tên danh mục không được bỏ trống', 'error')
+        } else {
             $.ajax({
-                url : 'Posts/add_category',
-                type : 'post',
-                data : {name : name},
-                dataType : 'json',
-                beForeSend : () => {
+                url: 'Posts/add_category',
+                type: 'post',
+                data: { name: name },
+                dataType: 'json',
+                beForeSend: () => {
 
-                }, success : (respone) => {
-                    if(respone.status == true){
-                        swal(respone.messages , 'success')
+                },
+                success: (respone) => {
+                    if (respone.status == true) {
+                        swal(respone.messages, 'success')
 
                         load(2000)
-                    }
-                    else {
+                    } else {
                         $('#error').addClass('alert-danger')
                         $('#error').html(respone.messages)
-                        swal('không thành công' , 'error')
+                        swal('không thành công', 'error')
                     }
-                    
+
                 }
             })
         }
     })
-    $(document).on('click', '.check_box', function (){
+
+    $(document).on('click', '.check_box', function() {
         if (this.checked) {
             var html = "";
-            html = `<td><input type="checkbox" id="${$(this).attr('id')}" data-name="${$(this).data('name')}" data-stt="${$(this).data('stt')}" class="check_box"  checked/>${$(this).data('stt')}</td>`
+            html = `<td><input type="checkbox" id="${$(this).attr('id')}" data-name="${$(this).data('name')}" data-stt="${$(this).data('stt')}" data-id="${$(this).data('id')}" class="check_box" checked/>${$(this).data('stt')}<input type="hidden" name="hidden_id[]" value="${$(this).attr('id')}" /></td>`
             html += `<td><input type="text" name="name[]" class="form-control" value="${$(this).data("name")}" /></td>`
-        }
-        else {
-            html = `<td><input type="checkbox" id="${$(this).attr('id')}" data-name="${$(this).data('name')}"  data-stt="${$(this).data('stt')}" class="check_box"/>${$(this).data('stt')}</td>`
+        } else {
+            html += `<td><input type="checkbox" id="${$(this).attr('id')}" data-name="${$(this).data('name')}"  data-stt="${$(this).data('stt')}" data-id="${$(this).data('id')}" class="check_box"/>${$(this).data('stt')}<input type="hidden" name="hidden_id[]" value="${$(this).attr('id')}" /></td>`
             html += `<td>${$(this).data('name')}</td>`
         }
         $(this).closest('tr').html(html);
     })
-    $('#delete').click(() => {
+    $(document).on('click', '#delete_category', function() {
+
         if ($('.check_box:checked').length > 0) {
             Swal.fire({
                 icon: 'warning',
@@ -287,19 +287,177 @@ $(document).ready(() => {
                     $.ajax({
                         url: 'Posts/delete_category',
                         method: "POST",
-                        data: $('#form_cartegory').serialize(),
+                        data: $('#form_category').serialize(),
                         success: function(respone) {
-                            load(1000)
+                            if (respone.status == true) {
+                                swal('Xóa Thành Công', 'success')
+                                load(1000)
+                            } else {
+                                swal(respone.messages, 'error')
+                            }
+
                         }
                     })
                 }
             })
 
         } else {
-           swal('Không có lựa chọn nào' , 'warning')
+            swal('Không có lựa chọn nào', 'warning')
         }
-    });
+    })
+    $(document).on('click', '#delete_sub_category', function() {
 
+        if ($('.check_box:checked').length > 0) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Bạn có thực sự muốn xóa?',
+                showDenyButton: false,
+                showCancelButton: true,
+                confirmButtonText: 'Xóa',
+                cancelButtonText: 'Trở về',
+
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: 'Posts/delete_sub_category',
+                        method: "POST",
+                        data: $('#form_category').serialize(),
+                        success: function(respone) {
+                            if (respone.status == true) {
+                                swal('Xóa Thành Công', 'success')
+                                load(1000)
+                            } else {
+                                swal(respone.messages, 'error')
+                            }
+
+                        }
+                    })
+                }
+            })
+
+        } else {
+            swal('Không có lựa chọn nào', 'warning')
+        }
+    })
+    $(document).on('click', '#update_category', function() {
+        if ($('.check_box:checked').length > 0) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Bạn có thực sự muốn cập nhật?',
+                showDenyButton: false,
+                showCancelButton: true,
+                confirmButtonText: 'Cập nhật',
+                cancelButtonText: 'Trở về',
+
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: 'Posts/update_category',
+                        method: "POST",
+                        data: $('#form_category').serialize(),
+                        beForeSend: () => {
+
+                        },
+                        success: (respone) => {
+                            if (respone.status == true) {
+                                swal('Cập nhật thành công', 'success')
+                                load(1000)
+                            } else {
+                                swal(respone.messages, 'error')
+                            }
+                        }
+                    })
+                }
+            })
+
+        } else {
+            swal('Không có lựa chọn nào', 'warning')
+        }
+    })
+
+    $('#id_category').change(() => {
+
+        load_sub_category();
+    })
+    $(document).on('submit', '#add_sub_category', function(e) {
+        e.preventDefault()
+        let id_category = $('#id_sub_category :selected').val()
+        let name = $('#name').val()
+
+        if (name == "") {
+            swal('Tên danh mục con không được bỏ trống')
+        } else {
+            $.ajax({
+                url: 'Posts/add_sub_category',
+                data: { id_category: id_category, name: name },
+                dataType: 'json',
+                beForeSend: () => {},
+                success: (respone) => {
+                    if (respone.status == true) {
+                        swal('Cập nhật thành công', 'success')
+                        load(1000)
+                    } else {
+                        swal(respone.messages, 'error')
+                    }
+                },
+            })
+        }
+
+    })
+
+    function load_sub_category() {
+        let id = $('#id_category :selected').val()
+        $.ajax({
+            url: 'Posts/load_category',
+            data: { id: id },
+            dataType: 'json',
+            beForeSend: () => {},
+            success: (respone) => {
+                $('#load_sub_categoty').html(respone.html)
+            },
+
+        })
+
+    }
+    load_sub_category();
+    $(document).on('click', '#update_sub_category', function() {
+        if ($('.check_box:checked').length > 0) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Bạn có thực sự muốn cập nhật?',
+                showDenyButton: false,
+                showCancelButton: true,
+                confirmButtonText: 'Cập nhật',
+                cancelButtonText: 'Trở về',
+
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: 'Posts/update_sub_category',
+                        method: "POST",
+                        data: $('#form_category').serialize(),
+                        beForeSend: () => {
+
+                        },
+                        success: (res) => {
+                            if (res.status == true) {
+                                swal('Cập nhật thành công', 'success')
+                                load(1000)
+                            } else {
+                                swal(res.messages, 'error')
+                            }
+                        }
+                    })
+                }
+            })
+
+        } else {
+            swal('Không có lựa chọn nào', 'warning')
+        }
+    })
 
 
 
