@@ -26,5 +26,15 @@
         <link href="<?= base_url()  ?>/public/admin/assets\libs\datatables\buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
         <link href="<?= base_url()  ?>/public/admin/assets\libs\datatables\responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url()  ?>/public\sweetalert2.min.css" rel="stylesheet" type="text/css" id="app-stylesheet">
+    <link href="<?= base_url()  ?>/public\main.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    *{
+        cursor: url('<?= base_url() ?> ./public/cur1.ani'), url('<?= base_url() ?> ./public/cur1.png'), auto !important;
+    }
+    a,label , input , textarea {
+        cursor: url('<?= base_url() ?> ./public/cur2.ani'), url('<?= base_url() ?> ./public/cur2.png'), auto !important;
+    }
+    
+     </style>
 
 </head>

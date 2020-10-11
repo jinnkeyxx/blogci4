@@ -7,7 +7,7 @@
 <div class="row">
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-1">
 
-        <form class="my-2 p-3" id="form-post" enctype="multipart/form-data">
+        <form class="my-1 p-3" id="form-post" enctype="multipart/form-data">
             <div class="input-append form-group">
                 <a href="<?= base_url() ?>/public/admin/filemanager/dialog.php?type=1&amp;field_id=fieldID&amp;relative_url=0&amp;multiple=1"
                     class="btn iframe-btn btn-primary mb-2" type="button">Chọn ảnh đại diện cho bài viết</a>
@@ -19,12 +19,30 @@
                 <input type="text" class="form-control" id="title_post">
             </div>
             <div class="form-group">
-                <label for="danhmuc">Danh mục bài viết</label>
-                <select class="form-control" id="danhmuc">
-                    <?php foreach($category as $value): ?>
-                    <option value="<?= $value['name']; ?>"><?= $value['name']; ?></option>
-                    <?php endforeach; ?>
-                </select>
+                <div class="form-inline">
+                    <div class="form-select mx-2">
+                        <label for="danhmuc">Danh mục bài viết</label>
+                        <select class="form-control" id="danhmuc">
+                            <?php foreach($category as $value): ?>
+                            <option value="<?= $value['id']; ?>"><?= $value['name']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                    <div class="form-select mx-2">
+                        <label for="danhmuc">Danh mục con bài viết</label>
+                        <select class="form-control" id="sub_category_select">
+                            
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="meta_keywork">Meta keyword</label>
+                <input type="text" class="form-control" id="meta_keywork">
+            </div>
+            <div class="form-group">
+                <label for="meta_description">Meta Description</label>
+                <input type="text" class="form-control" id="meta_description">
             </div>
             <textarea rows="15" class="tinymce" id="content" name="txt"></textarea>
             <div class="form-group" id="btn">

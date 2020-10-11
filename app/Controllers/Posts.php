@@ -106,7 +106,6 @@ class Posts extends BaseController
 						'name' => $names[$count],
 					];
 					$this->category->save($newData);
-					die(json_encode(array('status' => true , 'messages' => 'Cập nhật thành công')));
 				}
 			}
 		}
@@ -114,6 +113,8 @@ class Posts extends BaseController
 		{
 			die(json_encode(array('status' => false , 'messages' => 'Không có lựa chọn nào')));
 		}
+		return json_encode(array('status' => true , 'messages' => 'Cập nhật thành công'));
+
 	}
 	public function load_category()
 	{
@@ -133,6 +134,19 @@ class Posts extends BaseController
 							{$value['name']}
 						</td>
 					</tr>";
+		endforeach; 
+		die(json_encode(array('status' => true , 'html' => $html)));
+
+	}
+	public function load_category_select()
+	{
+		$id = $this->request->getVar('id');
+		$sub_category = $this->sub_category->where('id_category' , $id)->findAll();
+		$stt = 0;
+		$html = "";
+		foreach($sub_category as $key => $value): 
+			
+			$html = "<option value='{$value['id']}'>{$value['name']}</option>";
 		endforeach; 
 		die(json_encode(array('status' => true , 'html' => $html)));
 

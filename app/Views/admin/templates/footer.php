@@ -1,6 +1,8 @@
  <!-- Vendor js -->
 
  <script src="<?= base_url()  ?>/public/admin/assets\js\vendor.min.js"></script>
+
+
 <!-- <script src="<?= base_url()  ?>/public/admin/assets\js\jquery.fancybox-1.3.4.pack.js"></script> -->
     <script src="<?= base_url()  ?>/public/admin/assets\libs\datatables\jquery.dataTables.min.js"></script>
         <script src="<?= base_url()  ?>/public/admin/assets\libs\datatables\dataTables.bootstrap4.min.js"></script>
@@ -32,6 +34,7 @@
 <script src="<?= base_url()  ?>/public/admin/assets\js/jquery.fancybox.min.js"></script>
 <script src="<?= base_url()  ?>/public/admin/assets\js\app.min.js"></script>
 <script src="<?= base_url()  ?>/public\sweetalert2.all.min.js"></script>
+
 <script src="<?= base_url()  ?>/public\main.js"></script>
 </body>
 </html>

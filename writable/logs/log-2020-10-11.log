@@ -85,3 +85,144 @@ CRITICAL - 2020-10-11 06:11:26 --> Call to a member function where() on null
 #2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #3 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
 #4 {main}
+CRITICAL - 2020-10-11 18:55:35 --> Unknown database 'blogci4'
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1819): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Model.php(482): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(42): CodeIgniter\Model->first()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2020-10-11 18:58:00 --> Table 'blogci4.sub_category' doesn't exist
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT *\nFROM `...')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1819): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Model.php(445): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(121): CodeIgniter\Model->findAll()
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->load_category()
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-10-11 18:58:11 --> Table 'blogci4.sub_category' doesn't exist
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT *\nFROM `...')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1819): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Model.php(445): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(121): CodeIgniter\Model->findAll()
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->load_category()
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-10-11 18:58:21 --> Table 'blogci4.sub_category' doesn't exist
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT *\nFROM `...')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1819): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Model.php(445): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(121): CodeIgniter\Model->findAll()
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->load_category()
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-10-11 18:58:26 --> Table 'blogci4.sub_category' doesn't exist
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(330): mysqli->query('SELECT *\nFROM `...')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1819): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Model.php(445): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(121): CodeIgniter\Model->findAll()
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->load_category()
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-10-11 19:12:36 --> syntax error, unexpected '$messages' (T_VARIABLE), expecting identifier (T_STRING)
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('/Posts/load_cat...')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(785): CodeIgniter\Router\Router->handle('/Posts/load_cat...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-11 19:12:55 --> syntax error, unexpected '$messages' (T_VARIABLE), expecting identifier (T_STRING)
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('/Posts/update_c...')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(785): CodeIgniter\Router\Router->handle('/Posts/update_c...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-11 19:36:37 --> Unknown column 'created_at' in 'field list'
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(330): mysqli->query('INSERT INTO `su...')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `su...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `su...')
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2206): CodeIgniter\Database\BaseConnection->query('INSERT INTO `su...', Array, false)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Model.php(722): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Model.php(550): CodeIgniter\Model->insert(Array, false)
+#6 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(150): CodeIgniter\Model->save(Array)
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->add_sub_category()
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#9 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-10-11 19:36:52 --> Unknown column 'created_at' in 'field list'
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(330): mysqli->query('INSERT INTO `su...')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `su...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `su...')
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2206): CodeIgniter\Database\BaseConnection->query('INSERT INTO `su...', Array, false)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Model.php(722): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Model.php(550): CodeIgniter\Model->insert(Array, false)
+#6 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(150): CodeIgniter\Model->save(Array)
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->add_sub_category()
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#9 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-10-11 20:15:08 --> syntax error, unexpected '"'
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('/Posts/load_cat...')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(785): CodeIgniter\Router\Router->handle('/Posts/load_cat...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-11 20:15:25 --> syntax error, unexpected '"'
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('/Posts/load_cat...')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(785): CodeIgniter\Router\Router->handle('/Posts/load_cat...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-11 20:16:23 --> syntax error, unexpected '"'
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('/Posts/load_cat...')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(785): CodeIgniter\Router\Router->handle('/Posts/load_cat...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-11 20:16:51 --> syntax error, unexpected '"'
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('/Posts/load_cat...')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(785): CodeIgniter\Router\Router->handle('/Posts/load_cat...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-11 20:19:02 --> syntax error, unexpected '"'
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('/Posts/load_cat...')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(785): CodeIgniter\Router\Router->handle('/Posts/load_cat...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-11 20:20:01 --> syntax error, unexpected '"'
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Router\Router.php(192): CodeIgniter\Router\Router->autoRoute('/Posts/load_cat...')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(785): CodeIgniter\Router\Router->handle('/Posts/load_cat...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(358): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

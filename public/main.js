@@ -6,7 +6,7 @@ $(document).ready(() => {
             icon
         )
     }
-
+    
     function load(time) {
         setTimeout(() => {
             window.location.reload()
@@ -31,7 +31,7 @@ $(document).ready(() => {
                 success: (response) => {
                     if (response.status == true) {
                         swal('đăng nhập thành công', 'success')
-                        load(2000)
+                        load(1000)
                     } else {
                         $('#error').addClass('alert-danger')
                         $('#error').html(response.messages)
@@ -70,7 +70,7 @@ $(document).ready(() => {
                 success: (response) => {
                     if (response.status == true) {
                         swal('đăng kí thành công', 'success')
-                        load(2000)
+                        load(1000)
                     } else {
                         $('#error').addClass('alert-danger')
                         $('#error').html(response.messages)
@@ -115,7 +115,7 @@ $(document).ready(() => {
                 success: (respone) => {
                     if (respone.status == true) {
                         swal(respone.messages, 'success')
-                        load(2000)
+                        load(1000)
                     } else {
                         $('#error').addClass('alert-danger')
                         $('#error').html(respone.messages)
@@ -156,7 +156,7 @@ $(document).ready(() => {
             success: (respone) => {
                 if (respone.status == true) {
                     swal(respone.messages, 'success')
-                    load(2000)
+                    load(1000)
                 } else {
                     $('#error').addClass('alert-danger')
                     $('#error').html(respone.messages)
@@ -187,7 +187,6 @@ $(document).ready(() => {
         if ($('textarea').text() == "") {
             swal('Không được bỏ trống')
         } else {
-
             $.ajax({
                 url: 'Settings/setting_info',
                 type: 'post',
@@ -208,7 +207,7 @@ $(document).ready(() => {
                 success: (respone) => {
                     if (respone.status == true) {
                         swal(respone.messages, 'success')
-                        load(2000)
+                        load(1000)
                     } else {
                         $('#error').addClass('alert-danger')
                         $('#error').html(respone.messages)
@@ -247,7 +246,7 @@ $(document).ready(() => {
                     if (respone.status == true) {
                         swal(respone.messages, 'success')
 
-                        load(2000)
+                        load(1000)
                     } else {
                         $('#error').addClass('alert-danger')
                         $('#error').html(respone.messages)
@@ -288,6 +287,7 @@ $(document).ready(() => {
                         url: 'Posts/delete_category',
                         method: "POST",
                         data: $('#form_category').serialize(),
+                        dataType : 'json',
                         success: function(respone) {
                             if (respone.status == true) {
                                 swal('Xóa Thành Công', 'success')
@@ -323,6 +323,7 @@ $(document).ready(() => {
                         url: 'Posts/delete_sub_category',
                         method: "POST",
                         data: $('#form_category').serialize(),
+                        dataType : 'json',
                         success: function(respone) {
                             if (respone.status == true) {
                                 swal('Xóa Thành Công', 'success')
@@ -357,16 +358,18 @@ $(document).ready(() => {
                         url: 'Posts/update_category',
                         method: "POST",
                         data: $('#form_category').serialize(),
+                        dataType : 'json',
                         beForeSend: () => {
 
                         },
-                        success: (respone) => {
+                        success: function(respone) {
                             if (respone.status == true) {
-                                swal('Cập nhật thành công', 'success')
+                                swal('Cập nhật Thành Công', 'success')
                                 load(1000)
                             } else {
                                 swal(respone.messages, 'error')
                             }
+
                         }
                     })
                 }
@@ -380,6 +383,10 @@ $(document).ready(() => {
     $('#id_category').change(() => {
 
         load_sub_category();
+    })
+    $('#danhmuc').change(() => {
+
+        load_sub_category_select();
     })
     $(document).on('submit', '#add_sub_category', function(e) {
         e.preventDefault()
@@ -421,7 +428,27 @@ $(document).ready(() => {
         })
 
     }
-    load_sub_category();
+    function load_sub_category_select() {
+        let id = $('#danhmuc :selected').val()
+        $.ajax({
+            url: 'Posts/load_category_select',
+            data: { id: id },
+            dataType: 'json',
+            beForeSend: () => {},
+            success: (respone) => {
+                $('#sub_category_select').html(respone.html)
+            },
+
+        })
+
+    }
+    let url = window.location.href;
+    if(url.includes('sub_category')){
+        load_sub_category();
+    }
+    if(url.includes('write-post')){
+        load_sub_category_select();
+    }
     $(document).on('click', '#update_sub_category', function() {
         if ($('.check_box:checked').length > 0) {
             Swal.fire({
@@ -445,7 +472,7 @@ $(document).ready(() => {
                         success: (res) => {
                             if (res.status == true) {
                                 swal('Cập nhật thành công', 'success')
-                                load(1000)
+                                // load(1000)
                             } else {
                                 swal(res.messages, 'error')
                             }
