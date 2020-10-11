@@ -1,0 +1,272 @@
+CRITICAL - 2020-10-12 00:29:20 --> Undefined variable: errors
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(242): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 242, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->write_post()
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-12 00:29:32 --> Undefined variable: errors
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(242): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 242, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->write_post()
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-12 00:30:40 --> Undefined variable: errors
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(242): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 242, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->write_post()
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-12 00:35:41 --> Unknown column 'image_title' in 'field list'
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(330): mysqli->query('INSERT INTO `me...')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2206): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Model.php(722): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Model.php(550): CodeIgniter\Model->insert(Array, false)
+#6 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(258): CodeIgniter\Model->save(Array)
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->write_post()
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#9 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-10-12 00:37:30 --> Unknown column 'image_title' in 'field list'
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(330): mysqli->query('INSERT INTO `me...')
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `me...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `me...')
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2206): CodeIgniter\Database\BaseConnection->query('INSERT INTO `me...', Array, false)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Model.php(722): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Model.php(550): CodeIgniter\Model->insert(Array, false)
+#6 C:\xampp\htdocs\blogci4\app\Controllers\Posts.php(258): CodeIgniter\Model->save(Array)
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Posts->write_post()
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Posts))
+#9 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-10-12 01:04:07 --> Undefined index: image_post
+#0 C:\xampp\htdocs\blogci4\app\Views\admin\post.php(85): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 85, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/post', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(111): view('admin/post', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->post()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-12 03:32:08 --> Cannot use object of type App\Models\PostModel as array
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include()
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/edit_post', Array, true)
+#2 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(122): view('admin/edit_post', Array)
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('avatar-hai-tac2...')
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-10-12 03:38:02 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Views\admin\edit_post.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/edit_post', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(122): view('admin/edit_post', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('posts')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-12 04:03:22 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Views\admin\edit_post.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/edit_post', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(122): view('admin/edit_post', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('avatar-hai-tac2...')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-12 04:04:54 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Views\admin\edit_post.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/edit_post', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(122): view('admin/edit_post', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('titlepost7199')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-12 04:04:55 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Views\admin\edit_post.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/edit_post', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(122): view('admin/edit_post', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('titlepost7199')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-12 04:07:13 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Views\admin\edit_post.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/edit_post', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(122): view('admin/edit_post', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac8964')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-12 04:07:15 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Views\admin\edit_post.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/edit_post', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(122): view('admin/edit_post', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac8964')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-12 04:09:34 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Views\admin\edit_post.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/edit_post', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(122): view('admin/edit_post', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac5073')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-12 04:13:57 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Views\admin\edit_post.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/edit_post', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(122): view('admin/edit_post', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac4513')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-12 04:14:04 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Views\admin\edit_post.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/edit_post', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(122): view('admin/edit_post', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac6653')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-12 04:14:14 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Views\admin\edit_post.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/edit_post', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(122): view('admin/edit_post', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac6653')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-12 04:14:16 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Views\admin\edit_post.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/edit_post', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(122): view('admin/edit_post', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac2076')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-12 04:20:58 --> Undefined index: sub_category
+#0 C:\xampp\htdocs\blogci4\app\Views\admin\edit_post.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 35, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/edit_post', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(122): view('admin/edit_post', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac4874')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-12 04:21:21 --> Undefined index: sub_category_select
+#0 C:\xampp\htdocs\blogci4\app\Views\admin\edit_post.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 35, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/edit_post', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(122): view('admin/edit_post', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac4874')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-12 04:28:24 --> Array to string conversion
+#0 C:\xampp\htdocs\blogci4\app\Views\admin\edit_post.php(26): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string...', 'C:\\xampp\\htdocs...', 26, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/edit_post', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(130): view('admin/edit_post', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac4874')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-12 04:30:46 --> Undefined index: sub_category
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(119): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 119, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac4874')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-12 04:31:41 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Views\admin\edit_post.php(35): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 35, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('admin/edit_post', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(130): view('admin/edit_post', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac4874')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-12 04:36:29 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('write-post')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-12 04:36:37 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac4874')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-12 04:36:38 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac3076')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-12 04:36:40 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac6013')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-12 04:36:46 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac6013')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-12 04:36:47 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac8421')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-12 04:36:48 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac1650')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

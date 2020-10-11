@@ -4,6 +4,7 @@ use App\Models\HeaderModel;
 use App\Models\InfoModel;
 use App\Models\CategoryModel;
 use App\Models\Sub_CategoryModel;
+use App\Models\PostModel;
 class Dashboard extends BaseController
 {
 	
@@ -13,6 +14,7 @@ class Dashboard extends BaseController
 	public $info;
 	public $category;
 	public $sub_category;
+	public $post;
 	/**
 	 * Class constructor.
 	 */
@@ -25,6 +27,7 @@ class Dashboard extends BaseController
 		$this->info = new InfoModel();
 		$this->category = new CategoryModel();
 		$this->sub_category = new Sub_CategoryModel();
+		$this->post = new PostModel();
 	}
 	public function index()
 	{
@@ -96,17 +99,37 @@ class Dashboard extends BaseController
 		];
 		echo view('admin/sub_category' , $this->data);
 	}
- 	private function to_slug($str) {
-        $str = trim(mb_strtolower($str));
-        $str = preg_replace('/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/', 'a', $str);
-        $str = preg_replace('/(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)/', 'e', $str);
-        $str = preg_replace('/(ì|í|ị|ỉ|ĩ)/', 'i', $str);
-        $str = preg_replace('/(ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ)/', 'o', $str);
-        $str = preg_replace('/(ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ)/', 'u', $str);
-        $str = preg_replace('/(ỳ|ý|ỵ|ỷ|ỹ)/', 'y', $str);
-        $str = preg_replace('/(đ)/', 'd', $str);
-        $str = preg_replace('/[^a-z0-9-\s]/', '', $str);
-        $str = preg_replace('/([\s]+)/', '-', $str);
-        return $str;
-    }
+	public function post()
+	{
+		$this->data = [
+			'title' => 'Quản lí bài viết',
+			'page' => 'Quản lí bài viết',
+			'category' => $this->category->findAll(),
+			'sub_category' => $this->sub_category->findAll(),
+			'post' => $this->post->findAll(),
+		];
+		echo view('admin/post' , $this->data);
+	}
+	public function edit_post($slug)
+	{
+		$get_category = $this->post->where('slug' , $slug)->first();
+		$category = $get_category['category'];
+		$category_name = $this->category->where('id' , $category)->first();
+		$get_sub_category = $this->post->where('slug' , $slug)->first();
+		$sub_category = $get_sub_category['sub_category_select'];
+		$sub_category_name = $this->sub_category->where('id' , $sub_category)->first();
+		$this->data = [
+			'title' => 'Chỉnh sửa bài viết',
+			'page' => 'Chỉnh sửa bài viết',
+			'category' => $this->category->findAll(),
+			'sub_category' => $this->sub_category->findAll(),
+			'post' => $this->post->where('slug' , $slug)->first(),
+			'sub_category_name' => $sub_category_name,
+			'category_name' => $category_name,
+		];
+		echo view('admin/edit_post' , $this->data);
+		// echo "<pre>";
+		// print_r($this->data);
+		
+	}
 }

@@ -4,6 +4,7 @@ use App\Models\HeaderModel;
 use App\Models\InfoModel;
 use App\Models\CategoryModel;
 use App\Models\Sub_CategoryModel;
+use App\Models\PostModel;
 class Posts extends BaseController
 {
 	
@@ -13,6 +14,7 @@ class Posts extends BaseController
 	public $info;
 	public $category;
 	public $sub_category;
+	public $post;
 	/**
 	 * Class constructor.
 	 */
@@ -25,7 +27,7 @@ class Posts extends BaseController
 		$this->info = new InfoModel();
 		$this->category = new CategoryModel();
 		$this->sub_category = new Sub_CategoryModel();
-
+		$this->post = new PostModel();
 
 	}
 	public function add_category()
@@ -225,4 +227,111 @@ class Posts extends BaseController
 			die(json_encode(array('status' => false , 'messages' => 'Không có lựa chọn nào')));
 		}
 	}
+	public function write_post()
+	{
+		$rules = [
+			'image_title' => 'required|min_length[6]|valid_url',
+			'title_post' => 'required|min_length[6]',
+			'category' => 'required',
+			'sub_category_select' => 'required',
+			'meta_keywork' => 'required|min_length[3]',
+			'meta_description' => 'required|min_length[3]',
+			'content' => 'required|min_length[6]',
+			
+		];
+		if (! $this->validate($rules))
+		{
+			$data['validation'] = $this->validator;
+			echo json_encode(array('status' => false , 'messages' =>'Thêm bài thất bại'));
+		}
+		else 
+		{
+			$newData = [
+				'image_title' => $this->request->getVar('image_title'),
+				'title_post' => $this->request->getVar('title_post'),
+				'category' => $this->request->getVar('category'),
+				'sub_category_select' => $this->request->getVar('sub_category_select'),
+				'meta_keywork' => $this->request->getVar('meta_keywork'),
+				'meta_description' => $this->request->getVar('meta_description'),
+				'content' => $this->request->getVar('content'),
+				'slug' => $this->to_slug($this->request->getVar('title_post')).rand(1000,9999),
+			];
+			$this->post->save($newData);
+			echo json_encode(array('status' => true , 'messages' =>'Thêm bài thành công'));
+		}
+		
+	}
+	public function delete_post()
+	{
+		$id = $this->request->getVar('id');
+        
+		if(!empty($id))
+		{
+			$delete = $this->post->delete($id);
+		   	if($delete)
+			{
+			   die( json_encode(array('status' => true , 'messages' => 'Xóa thành công')));
+			}
+			else
+			{
+	 		   die( json_encode(array('status' => false , 'messages' => 'Xóa không thành công')));
+	  		}
+	    }
+	    else
+	    {
+	 	   die( json_encode(array('status' => false , 'messages' => 'Không có lựa chọn nào')));
+		   
+	    }
+	}
+	public function edit_post()
+	{
+		$rules = [
+			'image_title' => 'required|min_length[6]|valid_url',
+			'title_post' => 'required|min_length[6]',
+			'category' => 'required',
+			'sub_category_select' => 'required',
+			'meta_keywork' => 'required|min_length[3]',
+			'meta_description' => 'required|min_length[3]',
+			'content' => 'required|min_length[6]',
+			
+		];
+		if (! $this->validate($rules))
+		{
+			$data['validation'] = $this->validator;
+			echo json_encode(array('status' => false , 'messages' =>'Thêm bài thất bại'));
+		}
+		else 
+		{
+			$slug = $this->to_slug($this->request->getVar('title_post')).rand(1000,9999);
+			$newData = [
+				'id' => $this->request->getVar('id'),
+				'image_title' => $this->request->getVar('image_title'),
+				'title_post' => $this->request->getVar('title_post'),
+				'category' => $this->request->getVar('category'),
+				'sub_category_select' => $this->request->getVar('sub_category_select'),
+				'meta_keywork' => $this->request->getVar('meta_keywork'),
+				'meta_description' => $this->request->getVar('meta_description'),
+				'content' => $this->request->getVar('content'),
+				'slug' => $slug,
+				
+			];
+			$this->post->save($newData);
+			echo json_encode(array('status' => true , 'messages' =>'Thêm bài thành công' ,'slug' => base_url().'/posts/edit/'.$slug));
+		}
+		
+	}
+	private function to_slug($str) {
+        $str = trim(mb_strtolower($str));
+        $str = preg_replace('/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/', 'a', $str);
+        $str = preg_replace('/(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)/', 'e', $str);
+        $str = preg_replace('/(ì|í|ị|ỉ|ĩ)/', 'i', $str);
+        $str = preg_replace('/(ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ)/', 'o', $str);
+        $str = preg_replace('/(ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ)/', 'u', $str);
+        $str = preg_replace('/(ỳ|ý|ỵ|ỷ|ỹ)/', 'y', $str);
+        $str = preg_replace('/(đ)/', 'd', $str);
+        $str = preg_replace('/[^a-z0-9-\s]/', '', $str);
+        $str = preg_replace('/([\s]+)/', '-', $str);
+        return $str;
+    }
+	
 }

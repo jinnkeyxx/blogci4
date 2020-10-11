@@ -32,7 +32,7 @@
                     </a>
                     <ul class="nav-second-level" aria-expanded="false">
                         <li><a href="write-post">Viết bài mới</a></li>
-                        <li><a href="post">Tất cả bài viết</a></li>
+                        <li><a href="posts">Tất cả bài viết</a></li>
                         <li>
                             <a href="javascript: void(0);">
                                 <i class="mdi mdi-google-pages"></i>

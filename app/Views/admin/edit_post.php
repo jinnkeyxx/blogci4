@@ -7,22 +7,23 @@
 <div class="row">
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-1">
 
-        <form class="my-1 p-3" id="form-post" enctype="multipart/form-data">
+        <form class="my-1 p-3" id="form_edit_post" enctype="multipart/form-data" action="<?= base_url() ?>/Posts/edit_post">
             <div class="input-append form-group">
                 <a href="<?= base_url() ?>/public/admin/filemanager/dialog.php?type=1&amp;field_id=fieldID&amp;relative_url=0&amp;multiple=1"
                     class="btn iframe-btn btn-primary mb-2" type="button">Chọn ảnh đại diện cho bài viết</a>
-                <input id="fieldID" type="text" value="" class="form-control" name="image_title">
-
+                <input id="fieldID" type="text" value="<?= $post['image_title'] ?>" class="form-control" name="image_title">
+                <input type="hidden" name="id" value="<?= $post['id'] ?>">
             </div>
             <div class="form-group">
                 <label for="title_post">Tiêu đề bài viết</label>
-                <input type="text" class="form-control" id="title_post" name="title_post">
+                <input type="text" class="form-control" id="title_post" name="title_post" value="<?= $post['title_post'] ?>">
             </div>
             <div class="form-group">
                 <div class="form-inline">
                     <div class="form-select mx-2">
                         <label for="danhmuc">Danh mục bài viết</label>
-                        <select class="form-control" id="danhmuc" name="category">
+                        <select class="form-control" id="category" name="category">
+                            <option value="<?= $category_name['id'] ?>" slected><?= $category_name['name'] ?></option>
                             <?php foreach($category as $value): ?>
                             <option value="<?= $value['id']; ?>"><?= $value['name']; ?></option>
                             <?php endforeach; ?>
@@ -30,21 +31,24 @@
                     </div>
                     <div class="form-select mx-2">
                         <label for="sub_category_select">Danh mục con bài viết</label>
-                        <select class="form-control" id="sub_category_select" name="sub_category_select">
-                            
+                        <select class="form-control" id="sub_category" name="sub_category_select">
+                        <option value="<?= $sub_category_name['id'] ?>" selected><?= $sub_category_name['name'] ?></option>
+                        <?php foreach($sub_category as $value): ?>
+                            <option value="<?= $value['id']; ?>"><?= $value['name']; ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="meta_keywork">Meta keyword</label>
-                <input type="text" class="form-control" id="meta_keywork" name="meta_keywork">
+                <input type="text" class="form-control" id="meta_keywork" name="meta_keywork" value="<?= $post['meta_keywork'] ?>">
             </div>
             <div class="form-group">
                 <label for="meta_description">Meta Description</label>
-                <input type="text" class="form-control" id="meta_description" name="meta_description">
+                <input type="text" class="form-control" id="meta_description" name="meta_description" value="<?= $post['meta_description'] ?>">
             </div>
-            <textarea rows="15" class="tinymce" id="content" name="content"></textarea>
+            <textarea rows="15" class="tinymce" id="content" name="content" value=""><?= $post['content'] ?></textarea>
             <div class="form-group" id="btn">
                 <button class="btn btn-warning form-control mt-4" type="submit" name="btnSend"> GỬI </button>
             </div>

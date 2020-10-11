@@ -31,7 +31,7 @@
     *{
         cursor: url('<?= base_url() ?> ./public/cur1.ani'), url('<?= base_url() ?> ./public/cur1.png'), auto !important;
     }
-    a,label , input , textarea {
+    a,label , input , textarea , img , select {
         cursor: url('<?= base_url() ?> ./public/cur2.ani'), url('<?= base_url() ?> ./public/cur2.png'), auto !important;
     }
     

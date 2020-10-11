@@ -6,12 +6,32 @@ $(document).ready(() => {
             icon
         )
     }
-    
+    const base_url = "https://localhost/blogci4/"
+
     function load(time) {
         setTimeout(() => {
             window.location.reload()
         }, time)
     }
+    /* This is basic - uses default settings */
+
+    $("a#single_image").fancybox();
+
+    /* Using custom settings */
+
+    $("a#inline").fancybox({
+        'hideOnContentClick': true
+    });
+
+    /* Apply fancybox to multiple items */
+
+    $("a.group").fancybox({
+        'transitionIn': 'elastic',
+        'transitionOut': 'elastic',
+        'speedIn': 600,
+        'speedOut': 200,
+        'overlayShow': false
+    });
     $('#admin_login').submit((e) => {
         e.preventDefault()
         let username = $('#username')
@@ -218,9 +238,33 @@ $(document).ready(() => {
             })
         }
     })
-    $('#form-post').submit(() => {
-        let content = $('#content').val()
-        alert(content)
+    $(document).on('submit', '#form-post', function(e) {
+        e.preventDefault();
+        let image_title = $('#fieldID');
+        let title_post = $('#title_post');
+        let category = $('#danhmuc :selected').text()
+        let sub_category = $('#sub_category_select :selected').text()
+        let meta_keywork = $('#meta_keywork');
+        let meta_description = $('#meta_description')
+        let content = $('#content')
+        if (image_title.val() == "" || title_post.val() == "" || category == "" || sub_category == "" || meta_keywork.val() == "" || meta_description.val() == "" || content.val() == "") {
+            swal('Không được bỏ trống', 'error')
+        } else {
+            $.ajax({
+                url: 'Posts/write_post',
+                data: $('#form-post').serialize(),
+                dataType: 'json',
+                beForeSend: () => {},
+                success: (respone) => {
+                    if (respone.status == true) {
+                        swal('Thêm mới thành công', 'success')
+                        load(1000)
+                    } else {
+                        swal('Thêm mới thất bại', 'error')
+                    }
+                },
+            })
+        }
     })
     $('.iframe-btn').fancybox({
         'width': 900,
@@ -287,7 +331,7 @@ $(document).ready(() => {
                         url: 'Posts/delete_category',
                         method: "POST",
                         data: $('#form_category').serialize(),
-                        dataType : 'json',
+                        dataType: 'json',
                         success: function(respone) {
                             if (respone.status == true) {
                                 swal('Xóa Thành Công', 'success')
@@ -323,7 +367,7 @@ $(document).ready(() => {
                         url: 'Posts/delete_sub_category',
                         method: "POST",
                         data: $('#form_category').serialize(),
-                        dataType : 'json',
+                        dataType: 'json',
                         success: function(respone) {
                             if (respone.status == true) {
                                 swal('Xóa Thành Công', 'success')
@@ -358,7 +402,7 @@ $(document).ready(() => {
                         url: 'Posts/update_category',
                         method: "POST",
                         data: $('#form_category').serialize(),
-                        dataType : 'json',
+                        dataType: 'json',
                         beForeSend: () => {
 
                         },
@@ -428,6 +472,7 @@ $(document).ready(() => {
         })
 
     }
+
     function load_sub_category_select() {
         let id = $('#danhmuc :selected').val()
         $.ajax({
@@ -443,10 +488,10 @@ $(document).ready(() => {
 
     }
     let url = window.location.href;
-    if(url.includes('sub_category')){
+    if (url.includes('sub_category')) {
         load_sub_category();
     }
-    if(url.includes('write-post')){
+    if (url.includes('write-post')) {
         load_sub_category_select();
     }
     $(document).on('click', '#update_sub_category', function() {
@@ -472,7 +517,7 @@ $(document).ready(() => {
                         success: (res) => {
                             if (res.status == true) {
                                 swal('Cập nhật thành công', 'success')
-                                // load(1000)
+                                    // load(1000)
                             } else {
                                 swal(res.messages, 'error')
                             }
@@ -486,7 +531,75 @@ $(document).ready(() => {
         }
     })
 
+    $(document).on('click', '#delete_post', function(e) {
+        e.preventDefault();
+        let id = $(this).attr('data-id')
+        Swal.fire({
+            icon: 'warning',
+            title: 'Bạn có thực sự muốn xóa?',
+            showDenyButton: false,
+            showCancelButton: true,
+            confirmButtonText: 'Xóa',
+            cancelButtonText: 'Trở về',
 
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: 'Posts/delete_post',
+                    method: "POST",
+                    data: { id: id },
+                    dataType: 'json',
+                    success: function(respone) {
+                        if (respone.status == true) {
+                            swal('Xóa Thành Công', 'success')
+                            load(1000)
+                        } else {
+                            swal(respone.messages, 'error')
+                        }
+
+                    }
+                })
+            }
+        })
+
+
+    })
+
+    function redirect(timeout, page) {
+        setTimeout(() => {
+            window.location.href = page
+        }, timeout)
+    }
+    $(document).on('submit', '#form_edit_post', function(e) {
+        e.preventDefault();
+        let image_title = $('#fieldID');
+        let title_post = $('#title_post');
+        let category = $('#category :selected').text()
+        let sub_category = $('#sub_category :selected').text()
+        let meta_keywork = $('#meta_keywork');
+        let meta_description = $('#meta_description')
+        let content = $('#content')
+        if (image_title.val() == "" || title_post.val() == "" || category == "" || sub_category == "" || meta_keywork.val() == "" || meta_description.val() == "" || content.val() == "") {
+            swal('Không được bỏ trống', 'error')
+        } else {
+            $.ajax({
+                url: $(this).attr('action'),
+                data: $('#form_edit_post').serialize(),
+                dataType: 'json',
+                beForeSend: () => {},
+                success: (respone) => {
+                    if (respone.status == true) {
+                        swal('Thêm mới thành công', 'success')
+
+                        redirect(1000, respone.slug)
+                    } else {
+                        swal('Thêm mới thất bại', 'error')
+                    }
+                },
+            })
+        }
+    })
 
 
 })

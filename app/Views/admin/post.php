@@ -54,34 +54,54 @@
                             </div>
 
                             <table id="datatable"
-                                class=" text-center table table-bordered dt-responsive nowrap dataTable no-footer dtr-inline"
+                                class=" text-center table table-bordered dt-responsive  dataTable no-footer dtr-inline"
                                 style="border-collapse: collapse; border-spacing: 0px; width: 100%;" role="grid"
                                 aria-describedby="datatable_info">
                                 <thead>
                                     <tr role="row">
                                         <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1"
-                                            colspan="1" style="width: 155px;" aria-sort="ascending"
-                                            aria-label="Name: activate to sort column descending">stt</th>
+                                            colspan="1"  aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending">stt
+                                        </th>
                                         <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1"
-                                            colspan="1" style="width: 155px;" aria-sort="ascending"
-                                            aria-label="Name: activate to sort column descending">Name</th>
+                                            colspan="1"  aria-sort="ascending"
+                                            aria-label="Name: activate to sort column descending">Ảnh đại diện
+                                        </th>
+                                        <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1"
+                                            colspan="1"  >Nội dung
+                                        </th>
+                                        <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1"
+                                            colspan="1" >Tiêu đề
+                                        </th>
+                                        <th class="sorting_asc" tabindex="0" aria-controls="datatable" rowspan="1"
+                                            colspan="1" >Action
+                                        </th>
 
 
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach($category as $key => $value): ?>
+                                    <?php foreach($post as $key => $value): ?>
                                     <tr role="row" class="even">
                                         <td tabindex="0" class="sorting_<?= $key+1 ?>">
-                                            <input type="checkbox" data-id="<?= $value['id'] ?>" class="check_box"
-                                                data-name="<?= $value['name'] ?>" data-stt="<?= $key+1 ?>" id="<?= $value['id']?>" />
                                             <?= $key+1; ?>
                                         </td>
                                         <td tabindex="0">
-                                            <?= $value['name']; ?>
+                                            <a id="single_image" href="<?= $value['image_title']; ?>"><img src="<?= $value['image_title']; ?>" alt="" class="" style="width: 100%; height: 100px;"></a>
                                         </td>
+                                        <td tabindex="0" >
+                                           <code ><?= htmlspecialchars($value['content']); ?></code> 
+                                        </td>
+                                        <td tabindex="0">
+                                            <?= $value['title_post'] ?>
+                                        </td>
+                                        <td tabindex="0" >
+                                            <a href="posts/edit/<?= $value['slug'] ?>" class="btn-warning btn my-1"><i class="fas fa-edit"></i></a>
 
-
+                                            <a href="" class="btn-primary btn my-1"><i class="fas fa-eye"></i></a>
+                                            <button class="btn-danger btn my-1" id="delete_post" data-id="<?= $value['id'] ?>"><i class="fas fa-trash"></i></button>
+                                        
+                                        </td>
                                     </tr>
                                     <?php endforeach; ?>
                                 </tbody>
@@ -96,14 +116,6 @@
 </div>
 
 
-
-
-
-
-
-
-
-<!-- Footer Start -->
 <footer class="footer">
     <div class="container-fluid">
         <div class="row">

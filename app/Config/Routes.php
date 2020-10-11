@@ -46,6 +46,8 @@ $routes->get('setting-info', 'Dashboard::setting_info',['filter' => 'auth']);
 $routes->get('write-post', 'Dashboard::write_post',['filter' => 'auth']);
 $routes->get('category', 'Dashboard::category',['filter' => 'auth']);
 $routes->get('sub_category', 'Dashboard::sub_category',['filter' => 'auth']);
+$routes->get('posts', 'Dashboard::post',['filter' => 'auth']);
+$routes->get('posts/edit/(:segment)', 'Dashboard::edit_post/$1',['filter' => 'auth']);
 // $routes->match(['get','post'],'setting-meta', 'Dashboard::setting_meta',['filter' => 'auth']);
 
 
