@@ -15,11 +15,11 @@ $(document).ready(() => {
     }
     /* This is basic - uses default settings */
 
-    $("a#single_image").fancybox();
+    $("a.single_image").fancybox();
 
     /* Using custom settings */
 
-    $("a#inline").fancybox({
+    $("a.inline").fancybox({
         'hideOnContentClick': true
     });
 
@@ -590,11 +590,11 @@ $(document).ready(() => {
                 beForeSend: () => {},
                 success: (respone) => {
                     if (respone.status == true) {
-                        swal('Thêm mới thành công', 'success')
+                        swal('Cập nhật thành công', 'success')
 
                         redirect(1000, respone.slug)
                     } else {
-                        swal('Thêm mới thất bại', 'error')
+                        swal('Cập nhật thất bại', 'error')
                     }
                 },
             })

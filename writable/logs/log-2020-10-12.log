@@ -270,3 +270,56 @@ CRITICAL - 2020-10-12 04:36:48 --> Trying to access array offset on value of typ
 #3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2020-10-12 16:56:03 --> Undefined index: name
+#0 C:\xampp\htdocs\blogci4\app\Views\home\templates\header.php(237): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 237, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/templates/...', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Views\home\index.php(3): view('home/templates/...')
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/index', Array, true)
+#6 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(59): view('home/index', Array)
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-10-12 16:57:04 --> Undefined index: name
+#0 C:\xampp\htdocs\blogci4\app\Views\home\templates\header.php(237): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 237, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/templates/...', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Views\home\index.php(3): view('home/templates/...')
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/index', Array, true)
+#6 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(59): view('home/index', Array)
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-10-12 16:57:49 --> Undefined index: name
+#0 C:\xampp\htdocs\blogci4\app\Views\home\templates\header.php(237): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 237, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/templates/...', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Views\home\index.php(3): view('home/templates/...')
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/index', Array, true)
+#6 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(59): view('home/index', Array)
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-10-12 17:13:40 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('category')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-12 17:13:49 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Dashboard.php(116): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 116, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Dashboard->edit_post('vua-hai-tac2726')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}

@@ -71,13 +71,14 @@ tinymce.init({
     image_advtab: true,
     relative_urls: false,
     remove_script_host: false,
+    visual: true,
     plugins: [
         "advlist autolink link image lists charmap print preview hr anchor pagebreak",
         "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
-        "table contextmenu directionality emoticons paste textcolor responsivefilemanager code"
+        "table contextmenu directionality emoticons paste textcolor responsivefilemanager code "
     ],
     toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
-    toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
+    toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code | button",
     image_advtab: true,
 
     external_filemanager_path: "<?= base_url() ?>/public/admin/filemanager/",
@@ -105,7 +106,14 @@ tinymce.init({
         value: ''
     }, {
         title: 'Some class',
-        value: 'class-name'
+        value: 'image'
+    }],
+    link_class_list: [{
+        title: 'singel',
+        value: 'single_image'
+    }, {
+        title: 'single_image',
+        value: 'single_image'
     }],
     importcss_append: true,
     file_picker_callback: function(callback, value, meta) {

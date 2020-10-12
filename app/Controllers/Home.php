@@ -3,6 +3,9 @@ use App\Models\MetaModel;
 use App\Models\HeaderModel;
 use App\Models\InfoModel;
 use App\Models\UserModel;
+use App\Models\CategoryModel;
+use App\Models\Sub_CategoryModel;
+use App\Models\PostModel;
 class Home extends BaseController
 {
 	
@@ -11,6 +14,9 @@ class Home extends BaseController
 	public $header;
 	public $info;
 	public $user;
+	public $category;
+	public $sub_category;
+	public $post;
 	/**
 	 * Class constructor.
 	 */
@@ -22,6 +28,9 @@ class Home extends BaseController
 		$this->header = new HeaderModel();
 		$this->info = new InfoModel();
 		$this->user = new UserModel();
+		$this->category = new CategoryModel();
+		$this->sub_category = new Sub_CategoryModel();
+		$this->post = new PostModel();
 	}
 	public function index()
 	{
@@ -43,6 +52,8 @@ class Home extends BaseController
 			'header' => $this->header->first(),
 			'info' => $this->info->where('id' , 1)->first(),
 			'user' => $this->user->where('id' , session()->get('id'))->fisrt(),
+			'category' => $this->category->findAll(),
+			'sub_category' => $this->sub_category->findAll(),
 			
 		];
 		echo view('home/index' , $this->data);
