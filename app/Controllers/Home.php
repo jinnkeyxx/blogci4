@@ -54,12 +54,22 @@ class Home extends BaseController
 			'user' => $this->user->where('id' , session()->get('id'))->fisrt(),
 			'category' => $this->category->findAll(),
 			'sub_category' => $this->sub_category->findAll(),
+			'post' => $this->post->limit(3)->orderBy('id')->findAll(),
+			'post_one' =>  $this->post->limit(1)->orderBy('id' , 'DESC')->first(),
+			// 'get_name_sub_category' => $this->get_name_sub_category($id),
 			
 		];
 		echo view('home/index' , $this->data);
 		// echo $this->get_weather();
 		
 		
+	}
+	public function get_name_sub_category($id)
+	{
+		$sub_category = $this->sub_category->where('id' , $id)->first();
+		return $sub_category['name'];
+		// var_dump($sub_category);
+
 	}
 	public function ipinfo($ip = NULL, $purpose = "location", $deep_detect = TRUE) 
 	{

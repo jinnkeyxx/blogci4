@@ -1,0 +1,201 @@
+CRITICAL - 2020-10-15 01:36:52 --> Undefined variable: post
+#0 C:\xampp\htdocs\blogci4\app\Views\home\templates\header.php(250): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 250, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/templates/...', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Views\home\index.php(3): view('home/templates/...')
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/index', Array, true)
+#6 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(59): view('home/index', Array)
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-10-15 01:37:48 --> Undefined index: sub_category
+#0 C:\xampp\htdocs\blogci4\app\Views\home\templates\header.php(251): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 251, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/templates/...', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Views\home\index.php(3): view('home/templates/...')
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/index', Array, true)
+#6 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(60): view('home/index', Array)
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-10-15 01:38:26 --> Undefined index: created-at
+#0 C:\xampp\htdocs\blogci4\app\Views\home\templates\header.php(276): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 276, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/templates/...', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Views\home\index.php(3): view('home/templates/...')
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/index', Array, true)
+#6 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(60): view('home/index', Array)
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-10-15 01:46:37 --> Undefined index: sub_categoty
+#0 C:\xampp\htdocs\blogci4\app\Views\home\templates\header.php(271): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 271, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/templates/...', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Views\home\index.php(3): view('home/templates/...')
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/index', Array, true)
+#6 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(60): view('home/index', Array)
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-10-15 01:46:37 --> Undefined index: sub_categoty
+#0 C:\xampp\htdocs\blogci4\app\Views\home\templates\header.php(271): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 271, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/templates/...', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Views\home\index.php(3): view('home/templates/...')
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/index', Array, true)
+#6 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(60): view('home/index', Array)
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-10-15 01:46:49 --> Undefined index: sub_categoty_select
+#0 C:\xampp\htdocs\blogci4\app\Views\home\templates\header.php(271): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 271, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/templates/...', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Views\home\index.php(3): view('home/templates/...')
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/index', Array, true)
+#6 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(60): view('home/index', Array)
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2020-10-15 01:51:35 --> Undefined variable: id
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 58, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-15 01:52:43 --> Undefined variable: id
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 58, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-15 01:52:53 --> Cannot use object of type App\Models\Sub_CategoryModel as array
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(58): App\Controllers\Home->get_name_sub_category(0)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-15 01:53:24 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 69, Array)
+#1 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(58): App\Controllers\Home->get_name_sub_category(0)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-10-15 01:54:11 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 69, Array)
+#1 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(58): App\Controllers\Home->get_name_sub_category(0)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-10-15 01:55:12 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 69, Array)
+#1 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(58): App\Controllers\Home->get_name_sub_category(0)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-10-15 01:55:21 --> Trying to get property 'name' of non-object
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'C:\\xampp\\htdocs...', 69, Array)
+#1 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(58): App\Controllers\Home->get_name_sub_category(0)
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-10-15 01:55:42 --> Call to undefined function get_name_sub_category()
+#0 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include()
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/templates/...', Array, true)
+#2 C:\xampp\htdocs\blogci4\app\Views\home\index.php(3): view('home/templates/...')
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/index', Array, true)
+#5 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(61): view('home/index', Array)
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2020-10-15 01:56:27 --> Undefined variable: id
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 58, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-15 01:57:20 --> Undefined variable: id
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 58, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-15 15:48:16 --> Undefined index: iamge_title
+#0 C:\xampp\htdocs\blogci4\app\Views\home\index.php(41): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 41, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/index', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(62): view('home/index', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-15 15:57:44 --> Use of undefined constant DESC - assumed 'DESC' (this will throw an Error in a future version of PHP)
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp\\htdocs...', 58, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-15 15:57:54 --> Use of undefined constant DECS - assumed 'DECS' (this will throw an Error in a future version of PHP)
+#0 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp\\htdocs...', 58, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-15 16:23:49 --> Undefined index: image_title
+#0 C:\xampp\htdocs\blogci4\app\Views\home\index.php(43): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 43, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/index', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(62): view('home/index', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-10-15 16:26:24 --> Undefined index: image_title
+#0 C:\xampp\htdocs\blogci4\app\Views\home\index.php(42): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 42, Array)
+#1 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\View\View.php(236): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\Common.php(1071): CodeIgniter\View\View->render('home/index', Array, true)
+#3 C:\xampp\htdocs\blogci4\app\Controllers\Home.php(62): view('home/index', Array)
+#4 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(910): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(398): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\blogci4\vendor\codeigniter4\framework\system\CodeIgniter.php(306): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\blogci4\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

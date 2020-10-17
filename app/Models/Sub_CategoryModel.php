@@ -4,7 +4,7 @@ use CodeIgniter\Model;
 
 class Sub_CategoryModel extends Model{
   protected $table = 'sub_category';
-  protected $allowedFields = ['id_category','name'];
+  protected $allowedFields = ['id_category','name' , 'slug'];
   protected $beforeInsert = ['beforeInsert'];
   protected $beforeUpdate = ['beforeUpdate'];
   protected function beforeInsert(array $data){

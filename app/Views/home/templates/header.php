@@ -234,141 +234,49 @@
 							</li>
 							<?php foreach($category as $key => $value): ?>
 							<li class="mega-menu-item">
-								<a href="category/<?= $key+1 ?>.html" class="nav-link"><?= $value['name'] ?></a>
+								<a  href="category/<?= $value['slug'] ?>" class="nav-link"><?= $value['name'] ?></a>
 								<div class="sub-mega-menu">
 									<div class="nav flex-column nav-pills" role="tablist">
-										<a class="nav-link active" data-toggle="pill" href="#news-0" role="tab">All</a>
+										
 										<?php foreach($sub_category as $key => $value1): ?>
-										<a class="nav-link" data-toggle="pill" href="#news-<?= $key+1 ?>" role="tab"><?= $value1['name'] ?></a>
+										<?php if($value1['id_category'] == $value['id']): ?>
+										<a class="nav-link active" data-toggle="pill" href="<?= $value1['slug'] ?>" role="tab"><?= $value1['name'] ?></a>
+										
+										<?php endif; ?>
 										<?php endforeach; ?>
+
 											
 									</div>
 									<div class="tab-content">
 										<div class="tab-pane show active" id="news-0" role="tabpanel">
 											<div class="row">
+												<?php foreach($post as $item): ?>
+												<?php if($item['category'] == $value['id']): ?>
 												<div class="col-3">
 													<!-- Item post -->	
 													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-															<img src="<?= base_url()?>/public/home/assets/images/post-05.jpg" alt="IMG">
+														<a href="<?= $item['slug']; ?>" class="wrap-pic-w hov1 trans-03">
+															<img src="<?= $item['image_title'] ?>" alt="IMG">
 														</a>
 
 														<div class="p-t-10">
 															<h5 class="p-b-5">
 																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
+																	<?= $item['title_post'] ?>
 																</a>
 															</h5>
 
 															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Music
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
 																<span class="f1-s-3">
-																	Feb 18
+																	<?= $item['created_at'] ?>
 																</span>
 															</span>
 														</div>
 													</div>
 												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-															<img src="<?= base_url()?>/public/home/assets/images/post-10.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Finance
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 15
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-															<img src="<?= base_url()?>/public/home/assets/images/post-14.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Beach
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Feb 12
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
-
-												<div class="col-3">
-													<!-- Item post -->	
-													<div>
-														<a href="blog-detail-01.html" class="wrap-pic-w hov1 trans-03">
-															<img src="<?= base_url()?>/public/home/assets/images/post-36.jpg" alt="IMG">
-														</a>
-
-														<div class="p-t-10">
-															<h5 class="p-b-5">
-																<a href="blog-detail-01.html" class="f1-s-5 cl3 hov-cl10 trans-03">
-																	Donec metus orci, malesuada et lectus vitae
-																</a>
-															</h5>
-
-															<span class="cl8">
-																<a href="#" class="f1-s-6 cl8 hov-cl10 trans-03">
-																	Technology
-																</a>
-
-																<span class="f1-s-3 m-rl-3">
-																	-
-																</span>
-
-																<span class="f1-s-3">
-																	Jan 20
-																</span>
-															</span>
-														</div>
-													</div>
-												</div>
+												<?php endif; ?>
+											<?php endforeach; ?>
+											
 											</div>
 										</div>
 

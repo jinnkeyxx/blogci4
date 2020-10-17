@@ -36,6 +36,24 @@
 	<link rel="stylesheet" type="text/css" href="<?= base_url()?>/public/home/assets/css/util.min.css">
 <!--===============================================================================================-->	
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>/public/home/assets/css/main.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url()?>/public/home/assets/css/mdb.min.css">
+    
+    <link rel="stylesheet" href="<?= base_url()  ?>/public/admin/assets\css/jquery.fancybox.css" />
+	
+	<style type="text/css">
+    * {
+        cursor: url('<?= base_url() ?> ./public/cur1.ani'), url('<?= base_url() ?> ./public/cur1.png'), auto !important;
+    }
+
+    a,
+    label,
+    input,
+    textarea,
+    img,
+    select,
+    option,
+	div, {
+        cursor: url('<?= base_url() ?> ./public/cur2.ani'), url('<?= base_url() ?> ./public/cur2.png'), auto !important;
+    }
+    </style>
 <!--===============================================================================================-->
 </head>

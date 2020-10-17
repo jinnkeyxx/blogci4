@@ -41,7 +41,8 @@
     input,
     textarea,
     img,
-    select {
+    select,
+    option, {
         cursor: url('<?= base_url() ?> ./public/cur2.ani'), url('<?= base_url() ?> ./public/cur2.png'), auto !important;
     }
     </style>

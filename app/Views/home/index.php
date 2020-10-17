@@ -38,8 +38,8 @@
 		<div class="container">
 			<div class="row m-rl--1">
 				<div class="col-md-6 p-rl-1 p-b-2">
-					<div class="bg-img1 size-a-3 how1 pos-relative" style="background-image:url(<?=base_url()?>/public/home/assets/images/post-01.jpg);">
-						<a href="blog-detail-01.html" class="dis-block how1-child1 trans-03"></a>
+					<div class="bg-img1 size-a-3 how1 pos-relative" style="background-image:url(<?=$post_one['image_title']?>);">
+						<a href="<?= base_url() ?>/s/<?= $post_one['slug'] ?>" class="dis-block how1-child1 trans-03"></a>
 
 						<div class="flex-col-e-s s-full p-rl-25 p-tb-20">
 							<a href="#" class="dis-block how1-child2 f1-s-2 cl0 bo-all-1 bocl0 hov-btn1 trans-03 p-rl-5 p-t-2">
@@ -48,7 +48,7 @@
 
 							<h3 class="how1-child2 m-t-14 m-b-10">
 								<a href="blog-detail-01.html" class="how-txt1 size-a-6 f1-l-1 cl0 hov-cl10 trans-03">
-									Microsoft quisque at ipsum vel orci eleifend ultrices
+									<?= $post_one['title_post'] ?>
 								</a>
 							</h3>
 
@@ -62,7 +62,7 @@
 								</span>
 
 								<span class="f1-s-3 cl11">
-									Feb 16
+									<?= $post_one['created_at'] ?>
 								</span>
 							</span>
 						</div>

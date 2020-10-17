@@ -511,6 +511,7 @@ $(document).ready(() => {
                         url: 'Posts/update_sub_category',
                         method: "POST",
                         data: $('#form_category').serialize(),
+                        dataType: 'json',
                         beForeSend: () => {
 
                         },

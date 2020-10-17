@@ -51,6 +51,7 @@ class Posts extends BaseController
 		{
 			$newData = [
 				'name' => $this->request->getVar('name'),
+				'slug' => $this->to_slug($this->request->getVar('name')),
 			
 			];
 			$this->category->save($newData);
@@ -106,6 +107,7 @@ class Posts extends BaseController
 					$newData = [
 						'id' => $ids[$count],
 						'name' => $names[$count],
+						'slug' => $this->to_slug($names[$count]),
 					];
 					$this->category->save($newData);
 				}
@@ -161,6 +163,7 @@ class Posts extends BaseController
 			$newData = [
 				'id_category' => $id_category,
 				'name' => $name,
+				'slug' => $this->to_slug($this->request->getVar('name')),
 			];
 			$this->sub_category->save($newData);
 			die(json_encode(array('status' => true , 'messages' => 'thêm mới danh mục con thành công')));
@@ -216,6 +219,7 @@ class Posts extends BaseController
 					$newData = [
 						'id' => $ids[$count],
 						'name' => $names[$count],
+						'slug' => $this->to_slug($names[$count]),
 					];
 					$this->sub_category->save($newData);
 					die(json_encode(array('status' => true , 'messages' => 'Cập nhật thành công')));
@@ -320,6 +324,7 @@ class Posts extends BaseController
 		}
 		
 	}
+	
 	private function to_slug($str) {
         $str = trim(mb_strtolower($str));
         $str = preg_replace('/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/', 'a', $str);
